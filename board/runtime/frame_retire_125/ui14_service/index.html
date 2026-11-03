@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电能质量监测 · 四页实时显示</title>
+<style>
+:root{color-scheme:light;font-family:system-ui,"Microsoft YaHei",sans-serif;background:#E9E7E0;color:#31446C;--paper:#F6F5F1;--ink:#31446C;--royal:#2F509B;--blue:#4574C2;--sky:#70A0DF;--pale:#9DBFEB;--lavender:#CDC8E6}body{margin:0;padding:24px;max-width:1200px;margin:auto}header{display:flex;justify-content:space-between;align-items:center;gap:16px}h1{font-size:24px;margin:8px 0}small,.muted{color:var(--ink)}#status{padding:10px 16px;border-radius:24px;background:var(--pale);font-weight:600;border:1px solid var(--sky)}#status.bad{background:var(--lavender);border-color:var(--ink)}#origin{padding:12px 16px;background:var(--pale);border-left:3px solid var(--royal);margin:20px 0}main{display:grid;grid-template-columns:1fr 1fr;gap:18px}.channel{background:var(--paper);border:1px solid var(--sky);border-radius:14px;padding:20px}h2{margin:0 0 20px;font-size:18px;color:var(--royal)}.cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}.value{font-size:32px;font-weight:600;margin:8px 0;color:var(--royal);font-variant-numeric:tabular-nums}.unit{font-size:13px;color:var(--ink)}footer{margin-top:22px;font-size:13px;line-height:1.8}#reason{color:var(--ink);overflow-wrap:anywhere}.ok{color:var(--ink)}.bad{color:var(--ink)}#events{border-top:3px solid var(--lavender)}@media(max-width:600px){body{padding:14px}main{grid-template-columns:1fr}.value{font-size:28px}h1{font-size:20px}}
+@media(min-width:601px) and (max-height:600px){body{padding:16px}#origin{margin:12px 0;padding:10px 14px}.channel{padding:16px}h2{margin-bottom:12px}.cards{gap:12px}.value{font-size:28px;margin:5px 0}footer{margin-top:12px;line-height:1.5}}
+#wave{margin-top:18px;padding:18px;border:1px solid var(--sky);border-radius:14px;background:var(--paper)}canvas{display:block;width:100%;height:170px;background:#E9E7E0;margin:8px 0}#waveInfo{font-size:13px;color:var(--ink);overflow-wrap:anywhere}
+
+/* Four-page display: one shared data connection and native buttons. */
+*{box-sizing:border-box}body{height:100vh;height:100dvh;max-width:1280px;padding:12px 18px;display:flex;flex-direction:column;gap:8px;overflow:hidden}header{flex-shrink:0}header h1{font-size:22px;margin:2px 0}header small{font-size:11px}#status{padding:8px 14px}#origin{flex-shrink:0;margin:0;padding:7px 12px;font-size:12px}
+[data-page]{flex:1;min-height:0;overflow:auto;margin:0!important} [data-page][hidden]{display:none!important}
+#channels{gap:12px}.channel{padding:14px}h2{margin:0 0 12px}.cards{gap:12px}.value{font-size:28px;margin:4px 0}.unit{font-size:12px}#wave{padding:12px}canvas{height:clamp(70px,17vh,145px);margin:6px 0}#wave h2{margin-bottom:6px}
+footer{flex-shrink:0;margin:0;font-size:12px;line-height:1.35}footer>.muted{display:none}#reason:empty{display:none}#pageNav{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;flex-shrink:0}#pageNav button{min-height:52px;border:1px solid var(--sky);border-radius:10px;background:var(--paper);color:var(--royal);font-weight:600;font-family:inherit;font-size:18px;cursor:pointer;touch-action:manipulation}#pageNav button[aria-pressed="true"]{background:var(--royal);border-color:var(--royal);color:white}#pageNav button:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+@media(max-width:600px){body{padding:10px;gap:7px}#channels{grid-template-columns:1fr}#pageNav{gap:6px}#pageNav button{font-size:16px}header h1{font-size:19px}}
+
+/* Preview revision: ADC terminal voltage, nominal +/-10 V range. */
+body{max-width:none;padding:12px 16px;gap:10px}header small,#identity,#harmonicIdentity{display:none}header h1{font-size:25px}#origin{font-size:14px;background:transparent;border:0;padding:0 2px;color:#52668a}footer{font-size:14px}footer:has(#reason:empty){display:none}.channel{padding:20px}.cards{gap:26px 16px;margin-top:28px}.cards small{font-size:18px}.value{font-size:42px;margin:8px 0}.unit{font-size:17px}.unit-note{margin-top:26px;font-size:15px;line-height:1.6;color:#52668a}h2{font-size:23px;margin-bottom:18px}
+#wave{display:flex;flex-direction:column;padding:12px;gap:6px;overflow:hidden}#wave h2{font-size:20px;margin:0}#waveInfo{font-size:13px}#wave canvas{flex:1;min-height:0;height:0;width:100%;margin:0}#wave>small{font-size:12px}
+#events,#harmonics{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:transparent;border:0;padding:0}#events>article,#harmonics>article{min-width:0;overflow:auto;background:var(--paper);border:1px solid var(--sky);border-radius:14px;padding:20px}#eventState{font-size:25px;font-weight:600;line-height:1.4}#eventBaseline,#eventActive{font-size:17px;line-height:1.7;margin:12px 0}#eventHistory{font-size:17px;font-family:inherit;line-height:1.7}#eventState .muted{font-size:16px}#ch2EventStatus{font-size:28px;font-weight:600}.explain{font-size:17px;line-height:1.8;color:#52668a}.badge{display:inline-block;background:var(--lavender);padding:6px 12px;border-radius:8px}
+#harmonicStatus{font-size:17px;line-height:1.5}#harmonicFeatures{font-family:inherit;font-size:22px;line-height:1.85;margin-top:16px}#harmonicClass{font-size:29px;font-weight:650;line-height:1.5;margin:16px 0}#physicalIdentity{font-size:18px;line-height:1.7}#modelProbabilities{font-size:20px;line-height:1.7;font-family:inherit;white-space:pre-wrap;margin:16px 0}.scope-note{font-size:14px;line-height:1.5}#pageNav button{height:54px;font-size:21px}
+@media(max-height:500px){.cards{margin-top:12px;gap:14px}.value{font-size:32px}.unit-note{margin-top:12px}.channel{padding:15px}#events>article,#harmonics>article{padding:14px}#harmonicFeatures{font-size:18px;line-height:1.6}#harmonicClass{font-size:23px}#modelProbabilities{font-size:17px;margin:8px 0}#origin{font-size:12px}}
+#eventStateCH2{font-size:25px;font-weight:600;line-height:1.4}#eventBaselineCH2,#eventActiveCH2{font-size:17px;line-height:1.7;margin:12px 0}#eventHistoryCH2{font-size:17px;font-family:inherit;line-height:1.7}</style>
+<header><div><small>LAB07 / FEATURE MONITOR</small><h1>电能质量监测</h1></div><span id="status">等待数据</span></header>
+<div id="origin">正在连接数据服务…</div><main id="channels" data-page="overview" aria-label="总览"></main>
+<section id="wave" data-page="waveform" aria-label="波形" hidden><h2>双通道电压波形 · V</h2><div id="waveInfo">等待 Raw 数据</div><canvas id="waveCH1" width="1000" height="180"></canvas><canvas id="waveCH2" width="1000" height="180"></canvas><small>横轴：时间（ms） · 纵轴：各通道独立缩放 · ADC 电压未校准</small></section><section data-page="events" aria-label="事件" hidden id="events"><article><h2>CH1 · 事件监测</h2><div id="eventState"></div><div id="eventBaseline"></div><div id="eventActive"></div><pre id="eventHistory"></pre><div class="scope-note">根据 CH1 相对参考幅值判断；数据不连续时停止检测。</div></article><article><h2>CH2 · 事件监测</h2><div id="eventStateCH2"></div><div id="eventBaselineCH2"></div><div id="eventActiveCH2"></div><pre id="eventHistoryCH2"></pre><div class="scope-note">根据 CH2 独立参考幅值判断；数据不连续时停止检测。</div></article></section><section data-page="harmonics" aria-label="谐波" hidden id="harmonics"><article><h2>CH1 · 谐波特征</h2><div id="harmonicStatus"></div><div id="harmonicIdentity" hidden></div><pre id="harmonicFeatures"></pre><div class="scope-note">THD 仅包含 3 / 5 / 7 / 9 次奇次谐波；峰值因数无单位。</div></article><article><h2>CH1 · 模型识别</h2><div id="harmonicClass"></div><div id="physicalIdentity"></div><pre id="modelProbabilities"></pre><div class="scope-note">候选模型 · 概率未校准<br>仅供工程验证，不用于正式告警。</div></article></section><footer><div id="identity">帧号 — · 序号 —</div><div id="reason"></div><div class="muted">幅值未标定，单位为 ADC code。THD 仅含 3 / 5 / 7 / 9 次奇次谐波。<br>本阶段显示 Feature 与已确认 ACK 的 Raw 副本；事件检测为独立状态；模型按有效 CH1 六维输入计算，事件状态独立。</div></footer><nav id="pageNav" aria-label="显示页面"><button type="button" data-target="overview" aria-pressed="true">总览</button><button type="button" data-target="waveform" aria-pressed="false">波形</button><button type="button" data-target="events" aria-pressed="false">事件</button><button type="button" data-target="harmonics" aria-pressed="false">谐波</button></nav>
+<script>
+for(const button of document.querySelectorAll('#pageNav button'))button.addEventListener('click',()=>{
+ for(const panel of document.querySelectorAll('[data-page]'))panel.hidden=panel.dataset.page!==button.dataset.target;
+ for(const item of document.querySelectorAll('#pageNav button'))item.setAttribute('aria-pressed',String(item===button));
+});
+
+const VOLTS_PER_CODE=10/32768; // Nominal +/-10 V AD7606 input range; not calibrated.
+const definitions=[['RMS','有效电压','V RMS'],['PEAK','峰值电压','V peak'],['FREQUENCY_MHZ','频率','Hz'],['THD_ODD_3_5_7_9','奇次谐波 THD','%']];
+const values={};
+for(const ch of ['CH1','CH2']){const section=document.createElement('section');section.className='channel';const title=document.createElement('h2');title.textContent=ch;section.append(title);const cards=document.createElement('div');cards.className='cards';for(const [field,label,unit] of definitions){if(ch==='CH2'&&field==='FREQUENCY_MHZ')continue;const card=document.createElement('div');const text=document.createElement('small');text.textContent=label;const val=document.createElement('div');val.className='value';val.textContent='—';values[ch+'_'+field]=val;const u=document.createElement('span');u.className='unit';u.textContent=unit;card.append(text,val,u);cards.append(card)}section.append(cards);const note=document.createElement('div');note.className='unit-note';note.textContent='ADC 输入端电压 · 按 ±10 V 量程换算（未校准）';section.append(note);document.querySelector('#channels').append(section)}
+const labels={WAITING:'等待数据',LIVE:'实时数据',STALE:'数据陈旧',ERROR:'采集停止',INVALID:'当前帧无效'};
+function drawWave(w,featureFid){
+ const live=w?.status==='LIVE';
+ document.querySelector('#waveInfo').textContent=live?`${w.sample_count} 点/通道 · ${w.association==="MATCHED"&&w.frame_id===featureFid?"与总览同帧":"与总览不保证同帧"} · 数据年龄 ${w.age_s?.toFixed(1)??'—'} s`:(w?.reason||'Raw 未启用或等待新帧');
+ for(const [ch,color] of [['CH1','#2F509B'],['CH2','#31446C']]){
+  const c=document.querySelector('#wave'+ch);if(!c.closest('[hidden]')){c.width=Math.max(600,Math.round(c.clientWidth));c.height=Math.max(100,Math.round(c.clientHeight));}const ctx=c.getContext('2d');ctx.clearRect(0,0,c.width,c.height);
+  ctx.fillStyle=color;ctx.font='16px sans-serif';
+  const a=live?w[ch]:null;
+  if(!Array.isArray(a)||a.length!==2048){ctx.fillText(ch+' · 暂无可用波形',20,30);continue;}
+  const lo=Math.min(...a),hi=Math.max(...a),span=Math.max(hi-lo,1);
+  ctx.fillText(`${ch} · ${(lo*VOLTS_PER_CODE).toFixed(3)} ～ ${(hi*VOLTS_PER_CODE).toFixed(3)} V · 0–${((a.length-1)/w.fs_nominal_hz*1000).toFixed(1)} ms`,20,22);
+  ctx.strokeStyle='#9DBFEB';ctx.strokeRect(20,36,c.width-40,c.height-50);
+  ctx.beginPath();ctx.strokeStyle=color;
+  a.forEach((v,i)=>{const x=20+i/(a.length-1)*(c.width-40),y=44+(hi-v)/span*(c.height-66);if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y)});ctx.stroke();
+ }
+}
+function drawEvent(e, channel='CH1'){
+ const suffix=channel==='CH2'?'CH2':'';
+ const names={DISABLED:'未启用',WARMUP:'预热',NORMAL:'正常',SAG:'暂降',SWELL:'暂升',INTERRUPTION:'短时中断',ERROR:'停止：数据无效',STALE:'数据陈旧'};
+ const status=e?.status||'DISABLED';
+ const usable=['WARMUP','NORMAL','SAG','SWELL','INTERRUPTION'].includes(status);
+ document.querySelector('#eventState'+suffix).textContent=(names[status]||status)+(usable&&typeof e.rms_pu==='number'?` · ${e.rms_pu.toFixed(3)} pu`:'')+(e?.reason?' · '+(e.reason.includes('DATA_GAP')?'采样不连续':e.reason):'');
+ document.querySelector('#eventBaseline'+suffix).textContent=e?.baseline_id?`参考有效电压 ${(e.nominal_rms_code*VOLTS_PER_CODE).toFixed(3)} V（名义换算）`:'';
+ document.querySelector('#eventActive'+suffix).textContent=usable&&e?.active?`活动事件 ${e.active.states.join(' → ')} · 尚未恢复`:'无可显示的活动事件';
+ const records=(e?.records||[]).filter(r=>r.record==='event').slice(-5);
+ document.querySelector('#eventHistory'+suffix).textContent=records.length?records.map(r=>`${r.type} · ${r.complete?'完整':'不完整'} · ${typeof r.duration==='number'?r.duration.toFixed(3)+' s':'时长不可用'} · ${r.source_valid?'来源有效':'来源无效'}`).join('\n'):'暂无已结束事件';
+}
+function drawHarmonic(h, featureFid){
+ const accepted=h?.input_status==='accepted';
+ const fresh=typeof h?.display_age_s==='number'&&Number.isFinite(h.display_age_s)&&h.display_age_s>=0&&h.display_age_s<=.5;
+ const m=h?.physical_model;
+ const names=['CLEAN','H3_DOMINANT','H5_DOMINANT','MIXED'];
+ const titles=['低目标谐波','三次谐波主导','五次谐波主导','混合奇次谐波'];
+ const probabilities=m?.probabilities;
+ const identity=h?.frame_identity;
+ const same=identity&&m?.frame_identity&&JSON.stringify(identity)===JSON.stringify(m.frame_identity)&&identity.frame_id===h.source_frame_id;
+ const valid=accepted&&fresh&&same&&h.source_frame_id===featureFid&&h.feature_config_version==='lab07-harmonic-6d-0.1'&&m?.input_status==='ACCEPTED'&&Number.isInteger(m.class_id)&&m.class_id>=0&&m.class_id<4&&names[m.class_id]===m.model_prediction&&Array.isArray(probabilities)&&probabilities.length===4&&probabilities.every(v=>typeof v==='number'&&Number.isFinite(v)&&v>=0&&v<=1)&&Math.abs(probabilities.reduce((a,b)=>a+b,0)-1)<=1e-6;
+ document.querySelector('#harmonicStatus').textContent=!h||h.status==='DISABLED'?'输入适配未启用':`${accepted?'输入已接受':'输入未接受'} · ${valid?'候选推理完成':m?.error||h.error_code||'无有效模型结果'}`;
+ document.querySelector('#harmonicIdentity').textContent=h?.feature_config_version?`${h.feature_config_version} · Feature 帧号 ${h.source_frame_id??'—'} · 显示年龄 ${typeof h.display_age_s==='number'?h.display_age_s.toFixed(2):'—'} s`:'';
+ document.querySelector('#harmonicFeatures').textContent=accepted&&fresh&&h.features?Object.entries(h.features).map(([k,v])=>`${({CH1_band_h3_pct:'三次谐波',CH1_band_h5_pct:'五次谐波',CH1_band_h7_pct:'七次谐波',CH1_band_h9_pct:'九次谐波',CH1_thd_odd_pct:'奇次谐波 THD',CH1_crest:'峰值因数'})[k]||k}   ${typeof v==='number'&&Number.isFinite(v)?v.toFixed(3):'—'} ${k.endsWith('_crest')?'':'%'}`).join('\n'):'';
+ document.querySelector('#harmonicClass').textContent=valid?`${titles[m.class_id]}`:'候选分类 —';
+ document.querySelector('#physicalIdentity').textContent=m?`算法：${m.algorithm==='logistic_regression'?'逻辑回归（LR）':m.algorithm==='random_forest'?'随机森林（RF）':m.algorithm??'—'}`:'';
+ document.querySelector('#modelProbabilities').textContent=valid?'模型概率（未校准）\n'+probabilities.map((v,i)=>`${titles[i]}   ${(v*100).toFixed(2)}%`).join('\n'):'';
+}
+function clear(){for(const el of Object.values(values))el.textContent='—'}
+async function update(){try{const response=await fetch('/api/state',{cache:'no-store',signal:AbortSignal.timeout(2000)});if(!response.ok)throw Error('HTTP '+response.status);const s=await response.json();const demo=s.source==='demo';document.querySelector('#origin').textContent=demo?'演示模式 · 合成数据，非实测':'ADC 输入端电压 · ±10 V 名义量程 · 未校准';const status=document.querySelector('#status');status.textContent=(demo?'演示 · ':'')+(labels[s.status]||s.status);status.className=s.status==='LIVE'?'ok':'bad';clear();if(s.status==='LIVE'){for(const [key,el] of Object.entries(values)){const value=s.metrics[key];if(typeof value==='number'&&Number.isFinite(value))el.textContent=(key.includes('RMS')||key.includes('PEAK'))?(value*VOLTS_PER_CODE).toFixed(3):value.toFixed(3)}}document.querySelector('#identity').textContent=`帧号 ${s.frame_id??'—'} · 序号 ${s.seq??'—'} · 数据年龄 ${s.age_s==null?'—':s.age_s.toFixed(1)+' s'}`;document.querySelector('#reason').textContent=s.reason||'';drawWave(s.waveform,s.frame_id);drawEvent(s.event);drawEvent(s.event?.channels?.CH2,'CH2');drawHarmonic(s.status==='LIVE'?s.harmonic:null,s.frame_id)}catch(e){clear();drawHarmonic({status:'invalid_input',input_status:'rejected',error_code:'CONNECTION_LOST'});drawEvent({status:'ERROR',reason:'连接中断'});drawEvent({status:'ERROR',reason:'连接中断'},'CH2');drawWave({status:'ERROR',reason:'连接中断，隐藏旧波形'});document.querySelector('#status').textContent='连接中断';document.querySelector('#identity').textContent='';document.querySelector('#reason').textContent='网络连接中断，当前数据已清空'}finally{setTimeout(update,500)}}update();
+</script></html>
+
+
+
+

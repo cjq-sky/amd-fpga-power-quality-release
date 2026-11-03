@@ -1,0 +1,10 @@
+.build/
+__pycache__/
+*.pyc
+.venv/
+board/runtime/board_results/
+board/runtime/results/
+*.jou
+*.log
+
+board/runtime/frame_retire_125/results/

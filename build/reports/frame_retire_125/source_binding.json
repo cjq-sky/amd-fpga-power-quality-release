@@ -1,0 +1,118 @@
+{
+  "selection": "Representative final 125 MHz synthesis/implementation/release reports; no historical optimization report duplication",
+  "reports": [
+    {
+      "path": "build/reports/frame_retire_125/utilization_synth.rpt",
+      "source_sha256": "8a4c721c0107ac1a6d49d64b262309972c0db19ba70a0d4dea6a2d72653a4978",
+      "sha256": "0f3314934196b4753d1eb62df47d82f6d31a8df199f04be94a4fa2bbd89b87dd",
+      "phase": "synthesis",
+      "historical_date": "2026-11-02",
+      "header_redactions": [
+        "host_header"
+      ],
+      "result_body_sha256": "a0bed0feded6b9b27c5e4e781304654a70e6f5dea4bbe4c5bf8e303930282080",
+      "result_body_byte_identical": true,
+      "source_name": "unified_top_utilization_synth.rpt"
+    },
+    {
+      "path": "build/reports/frame_retire_125/utilization_routed.rpt",
+      "source_sha256": "7936d723b34915ba6969bd3cc2498bb4d45842b1bf1378a37cd1eafb1e52f759",
+      "sha256": "6c00f9d45471c6be849aef9777e0b9b4a985258c3ea342afa1414d060144a498",
+      "phase": "routed",
+      "historical_date": "2026-11-02",
+      "header_redactions": [
+        "host_header",
+        "command_output_path"
+      ],
+      "result_body_sha256": "7701bf2fdf8c0216060fc72016455652e0f0f1f0a3e0f513d91c596d85a3e598",
+      "result_body_byte_identical": true,
+      "source_name": "utilization_routed.rpt"
+    },
+    {
+      "path": "build/reports/frame_retire_125/timing_startup.rpt",
+      "source_sha256": "b1da7bec0db51777899e485a6fc6f35ca9e3eeac52d918716bd041c9ba085de0",
+      "sha256": "b0f9ed709eb5e3fbc82494159137ef8ca809ab17baa3498a162073f701b4979c",
+      "phase": "routed_startup",
+      "historical_date": "2026-11-02",
+      "header_redactions": [
+        "host_header",
+        "command_output_path"
+      ],
+      "result_body_sha256": "e23a1de99b937f400758a196846238dc929f324e419741b47ac91887a7490692",
+      "result_body_byte_identical": true,
+      "source_name": "timing_summary.rpt"
+    },
+    {
+      "path": "build/reports/frame_retire_125/timing_operating.rpt",
+      "source_sha256": "3183d845b7b31df99f7eed633004a72392821166a24885f806e5907faf6c9804",
+      "sha256": "42e65fc0e8e3574a88bc1efb756b11faa9b2fac65bb7787d68e3ce23bed721e0",
+      "phase": "routed_operating",
+      "historical_date": "2026-11-02",
+      "header_redactions": [
+        "host_header",
+        "command_output_path"
+      ],
+      "result_body_sha256": "b3b59e8cfa5b09fb2507c5b67a4e0fa9b16c4a40bc8199a9d5936ce8e008a8ce",
+      "result_body_byte_identical": true,
+      "source_name": "timing_summary.rpt"
+    },
+    {
+      "path": "build/reports/frame_retire_125/route_status.rpt",
+      "source_sha256": "b313e868815f7e251fda0b21da081fc19add1970f10efe90a1363619da5bfc33",
+      "sha256": "b313e868815f7e251fda0b21da081fc19add1970f10efe90a1363619da5bfc33",
+      "phase": "routed",
+      "historical_date": "2026-11-02",
+      "header_redactions": [],
+      "result_body_sha256": "b313e868815f7e251fda0b21da081fc19add1970f10efe90a1363619da5bfc33",
+      "result_body_byte_identical": true,
+      "source_name": "route_status.rpt"
+    },
+    {
+      "path": "build/reports/frame_retire_125/cdc_startup.rpt",
+      "source_sha256": "83367f971907aa73db2a208e64ff9d77d37a78faeb8720932167add3ccdc7186",
+      "sha256": "db3620da9495b3139c20036093de1a3a7dc4514f2217c889b95e277386ad1469",
+      "phase": "routed_startup",
+      "historical_date": "2026-11-02",
+      "header_redactions": [
+        "host_header",
+        "command_output_path"
+      ],
+      "result_body_sha256": "a79f40c4d3595304eabb2315200d91a63242b5d526c8f624729243b0ba5ceed4",
+      "result_body_byte_identical": true,
+      "source_name": "cdc.rpt"
+    },
+    {
+      "path": "build/reports/frame_retire_125/drc_startup.rpt",
+      "source_sha256": "f82f465e4aaadd5cfd863c765e458b9a320ab31061b1dc3c63485a92a1121df4",
+      "sha256": "0aa7ea80d63cf124d85dc497873232575c4360971e1c1257e8cfc53507767859",
+      "phase": "routed_startup",
+      "historical_date": "2026-11-02",
+      "header_redactions": [
+        "host_header",
+        "command_output_path"
+      ],
+      "result_body_sha256": "cfd4e5d2d30d1ca6245f54b69704f0b85e874b9eb54f4217d5862abde748256e",
+      "result_body_byte_identical": true,
+      "source_name": "drc.rpt"
+    },
+    {
+      "path": "build/reports/frame_retire_125/bitstream_checks.rpt",
+      "source_sha256": "b92e668ab764d11ad0afd6a5a0928382a1f78c76dc0ea2e40549aa5c6873ba72",
+      "sha256": "4813d3631e948ef53cea88fec97064207f5f38ec577c6b8b77e7b8c109139f43",
+      "phase": "release_before_bit",
+      "historical_date": "2026-11-02",
+      "header_redactions": [
+        "host_header",
+        "command_output_path"
+      ],
+      "result_body_sha256": "d78799daab34cd62dcfc33ef677f4cf6a1a1885daa72deffa7b3062792928617",
+      "result_body_byte_identical": true,
+      "source_name": "bitstream_checks_before_bit.rpt"
+    }
+  ],
+  "approved_bit_sha256": "45197bb23c05e8f8c73e4cbbced7c12ce66599a4b54a407d77fefd94a08820f4",
+  "approved_hwh_sha256": "54980f765756f8dc64ade54af7969c7b96054c816a31d88ab9d2c07fbce05b6f",
+  "approved_routed_dcp_sha256": "51034a1528d12ee76214c58f53b33089fb280d0da81908ca9221e15c4ea22df0",
+  "derivation": "Only build-host metadata and developer-local output paths in report headers redacted; all remaining bytes including copyright/date/tool/results unchanged",
+  "execution": "EXISTING_REPORTS_ONLY_NO_NEW_BUILD_OR_TOOL_ANALYSIS"
+}

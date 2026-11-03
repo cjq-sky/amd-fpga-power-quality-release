@@ -1,0 +1,17 @@
+{
+  "baseline_id": "CH2_REFERENCE_CH2_REFERENCE_20261024_092641_277358",
+  "channel": "CH2",
+  "fs_hz": 10000,
+  "f0_hz": 50,
+  "window_samples": 200,
+  "nominal_rms_code": 1157.8141936125858,
+  "rms_domain": "ADC code, no DC subtraction, float64 before square",
+  "input": "operator set CH2 sine 50Hz/1Vpp/offset0/High-Z/ON",
+  "client_business_date": "2026-11-03",
+  "board_wallclock": "2026-10-24T09:27:02.566401",
+  "method": "mean of RMS from 20 distinct fresh HTTP Raw CH2 copies; not a continuity test",
+  "scope": "controlled relative event reference, not voltage calibration or continuous-capture acceptance",
+  "sample_count": 40960,
+  "nominal_voltage_RMS": 0.3533368510780596,
+  "coefficient_variation": 0.005496770910117887
+}

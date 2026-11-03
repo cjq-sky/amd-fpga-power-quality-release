@@ -1,0 +1,57 @@
+{
+  "feature_config_version": "lab07-harmonic-6d-0.1",
+  "schema_id": "lab07_band_shape_v1_candidate_CH1",
+  "input_channel": "CH1",
+  "shape": [
+    6
+  ],
+  "dtype": "float32",
+  "feature_order": [
+    "H3_pct",
+    "H5_pct",
+    "H7_pct",
+    "H9_pct",
+    "THD_ODD_pct",
+    "Crest"
+  ],
+  "adapter_keys": [
+    "CH1_band_h3_pct",
+    "CH1_band_h5_pct",
+    "CH1_band_h7_pct",
+    "CH1_band_h9_pct",
+    "CH1_thd_odd_pct",
+    "CH1_crest"
+  ],
+  "units": [
+    "percent",
+    "percent",
+    "percent",
+    "percent",
+    "percent",
+    "ratio"
+  ],
+  "labels": [
+    {
+      "id": 0,
+      "name": "CLEAN"
+    },
+    {
+      "id": 1,
+      "name": "H3_DOMINANT"
+    },
+    {
+      "id": 2,
+      "name": "H5_DOMINANT"
+    },
+    {
+      "id": 3,
+      "name": "MIXED"
+    }
+  ],
+  "display_aliases": {
+    "MIXED": "MIXED_ODD_HARMONICS"
+  },
+  "preprocessing": "Unscaled six features enter PortableModel; LR scaler already included; no second normalization. RF consumes float32.",
+  "invalid_input": "Preserve upstream Reader/Adapter gating; no zero padding or old prediction as current; batch CLI cannot re-evaluate live freshness.",
+  "model_uses_CH2": false
+}

@@ -1,0 +1,22 @@
+{
+  "split_role": "calibration_dev",
+  "sample_rate_hz": 1000,
+  "duration_s": 1,
+  "fundamental_hz": 50,
+  "cases": [
+    {
+      "id": "EXAMPLE_SINE",
+      "lineage_group_id": "EXAMPLE_PARENT"
+    },
+    {
+      "id": "EXAMPLE_H3",
+      "lineage_group_id": "EXAMPLE_PARENT",
+      "harmonics": {
+        "3": {
+          "ratio": 0.05,
+          "phase_rad": 0
+        }
+      }
+    }
+  ]
+}

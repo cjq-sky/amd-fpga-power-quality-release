@@ -1,0 +1,11 @@
+id,file,original_file_name,content,awg_panel_vpp,offset_v,load,whole_record_repeat_hz,fundamental_hz,points,duration_s,compensated_nominal_vpp,h3_percent,h5_percent,bytes,code_min,code_max,sha256
+demo_sine_low,waveforms/demo_sine_low.bin,DEMO_SINE_LOW.bin,低幅正弦,1.00,0,High-Z,1,50,10000,1,0.660000,,,20048,7030,12970,c51e96c37410d1d57a75caa297f13a06292f7b9fea80f39b9c44f96b77812876
+demo_sine_base,waveforms/demo_sine_base.bin,DEMO_SINE_BASE.bin,基准正弦,1.00,0,High-Z,1,50,10000,1,1.060000,,,20048,5230,14770,c79f958d43e00b6147c6bd90609941dc423dca2b8a1ced75f4bd517a747aebff
+demo_sine_high,waveforms/demo_sine_high.bin,DEMO_SINE_HIGH.bin,高幅正弦,1.25,0,High-Z,1,50,10000,1,1.260000,,,20048,5464,14536,33314dbf4ed3c74a8f62f4fcbce9eacbd946cdca0c733abf9d859ab0ade56a24
+demo_ev_sag20,waveforms/demo_ev_sag20.bin,DEMO_EV_SAG20.bin,暂降后恢复,1.00,0,High-Z,1,50,10000,1,1.06 -> 0.26 -> 1.06,,,20048,5230,14770,52b2b54855f3e5f6525e4579dfd65159a3912e6dd93cb0fe1575d62244b2dba3
+demo_ev_swell150,waveforms/demo_ev_swell150.bin,DEMO_EV_SWELL150.bin,暂升后恢复,1.50,0,High-Z,1,50,10000,1,1.06 -> 1.56 -> 1.06,,,20048,5320,14680,f58fff462f6028db1f20451e5fd3f7f8f4f15d29e7aadd1166aa39fc1fe2a578
+demo_ev_interrupt,waveforms/demo_ev_interrupt.bin,DEMO_EV_INTERRUPT.bin,低幅残余段后恢复,1.00,0,High-Z,1,50,10000,1,1.06 -> 0.06 -> 1.06,,,20048,5230,14770,64fb8db28a2e36cf63be341df6fa379a9b7c2edf7ad41976ce33eca58f61d46c
+tr_clean_00,waveforms/tr_clean_00.bin,TR_CLEAN_00.bin,纯正弦,1.00,0,High-Z,1,50,10000,1,0.710000,0,0,20048,6805,13195,095ee0479ca62edbeb06e225ef285c82c5d9dda06a347f066dbe9310ac7d4570
+tr_h3_r00_v0,waveforms/tr_h3_r00_v0.bin,TR_H3_R00_V0.bin,三次谐波2%,1.00,0,High-Z,1,50,10000,1,0.698174,2,0,20048,6858,13142,995d325021e26ffe1e0fc7698d3077ecf2dec3412cc62ab91a3431192f0f6d1d
+tr_h5_r00_v0,waveforms/tr_h5_r00_v0.bin,TR_H5_R00_V0.bin,五次谐波2%,1.00,0,High-Z,1,50,10000,1,0.721132,0,2,20048,6755,13245,7513c4bd306439844851acc254d55d0c98990ecf8014f83021a89630d96c0cdc
+tr_mix_00_v0,waveforms/tr_mix_00_v0.bin,TR_MIX_00_V0.bin,三次、五次谐波各3%,1.00,0,High-Z,1,50,10000,1,0.708205,3,3,20048,6813,13187,9cb38af9778ea39fa6b021ff83871e797afbfaad4ee8bce39a64cc5a263cdd88

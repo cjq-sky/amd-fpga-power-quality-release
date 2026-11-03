@@ -1,0 +1,25 @@
+{
+  "baseline_id": "NOMINAL_BASELINE_001",
+  "client_date": "2026-10-24",
+  "channel": "CH1",
+  "fs_hz": 10000,
+  "fs_basis": "frozen Lab07 nominal; not independently calibrated",
+  "f0_hz": 50,
+  "window_samples": 200,
+  "nominal_rms_code": 1152.9852916757695,
+  "rms_domain": "ADC code, no DC subtraction, float64 before square",
+  "input": "sine, 50 Hz, 1 Vpp, Offset 0, High-Z, ON; operator confirmed unchanged",
+  "source_run": "RAW_CONTINUITY_001",
+  "source_archive_sha256": "ea5038b00cf9b5d35fb6a94ed65752f599a085155e8451c5298b07afc961ac4d",
+  "first_frame_id": 26803,
+  "last_frame_id": 26832,
+  "excluded_frame_ids": [
+    7237,
+    7238
+  ],
+  "sample_count": 61440,
+  "method": "sqrt(mean(one-cycle sliding mean-square)) over 30 post-backlog contiguous frames",
+  "scope": "Controlled ADC-code baseline for this hardware setup; not V/A or sample-clock calibration",
+  "acquisition_fault_live_diagnostics": "not present in source evidence",
+  "event_detector_hw_integration": "PENDING"
+}

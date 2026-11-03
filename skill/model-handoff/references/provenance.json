@@ -1,0 +1,18 @@
+{
+  "record_kind": "historical_source_identity_summary",
+  "source_sha256": "2f51947dac23a38009f7449e8fd717c5489130d84cfcdd4ac70d2ee14ef66191",
+  "source_records": [
+    {
+      "record_id": "source_1",
+      "sha256": "e0cb0d843b3bdd0347afb6d3251aacd41fcdab0e3e1a77b4dd1727d0e6640216"
+    },
+    {
+      "record_id": "source_2",
+      "sha256": "55285b4914773014e88dd6571ded03496b664a5e1f49828fa1fb61fe12537e25"
+    },
+    {
+      "record_id": "source_3",
+      "sha256": "658dce2f855811246725c56bdc855d035f2998de4db1cb54c709cfadd02b3af1"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "export_verification.json": "aa16ea3a362ccfa9975b9e7fc7155552ffc6334b31922572438564d5bca85cea",
+  "offline_verification.json": "929bd2766c0169413decef4bb7adfae9b7e646238bad7c4c73d6238f9b8c4918",
+  "deployment_guide.md": "2abf3e7a9c5244e52be0fc5414445b80621864052d9b3f0ea14f5acd9642890e",
+  "deployment_manifest.json": "5516b50719be3a0e0cc170a96d72f2e7498686477fdf32a0297a9dcf38003928",
+  "golden.json": "a35bd376648f9cdfc8362fea781ac2079822bd0ced8b8853fa6952bf6befe12e",
+  "logistic_regression.json": "06e30149cf4c469e0a3da5743c98ff87697ada7d0a6493eaa6081f88c62cb16c",
+  "portable_model.py": "c77263ec7dbca537d4eac1a84e012b73854c9ae66fb2ff4518e7264e0e11b323",
+  "random_forest.json": "e2d9eb13955713bccaf394d4d1d22b9ff32e231213f97c85359c5b7508e8f439",
+  "verify_board.py": "edc0a3d146fc47d7f907d7e32717f61b0520e943c0ecd9b9b07072f9cd068918"
+}

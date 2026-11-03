@@ -1,0 +1,44 @@
+{
+  "version": "0.2.1",
+  "source": "pq_wavegen 0.2.1",
+  "files": {
+    "bin_codec.py": {
+      "sha256": "e0dd2f7ed8aa313d98724a88584cc36e94dcf0d21af2c55cb626eb2fffbd0eae",
+      "matches_current_tools": true
+    },
+    "events.py": {
+      "sha256": "7355124178bd6167cfc982f334e15b3936529bd647e9961167e07dbe47e743ca",
+      "matches_current_tools": true
+    },
+    "events_demo.json": {
+      "sha256": "b50440ac17a58a2f5b618b83e65457bc6227a570d7cb7d189caeb0ef258a8e27",
+      "matches_current_tools": true
+    },
+    "PACKAGE_SHA256.json": {
+      "sha256": "d59289d051548e8b9a1512cdcf853c17f1dac34056e0b2f9e5094e99044edfd4",
+      "matches_current_tools": false
+    },
+    "README.md": {
+      "sha256": "8a26b05de7fbd88c6750b623cfd6d70c533778dd299c2bf830d341df991c5855",
+      "matches_current_tools": true
+    },
+    "s0_s1.json": {
+      "sha256": "23bdfa9555913c738a0afe4bbc7dfc6962e541a30a8ed8276123119a8bc6223b",
+      "matches_current_tools": true
+    },
+    "test_bin_codec.py": {
+      "sha256": "0ac7d54ebaf363614cc01eeae88047436116ccbb5044aaf596c857ad5f0aa75b",
+      "matches_current_tools": true
+    },
+    "test_events.py": {
+      "sha256": "592bdfe130374e6319b654b8a623cabcdd9026ab7ac3486f91d19b336a7a878b",
+      "matches_current_tools": true
+    },
+    "wavegen.py": {
+      "sha256": "7ce0a55b5b37e355120e4f74ba97e5395744e9182bb5779537bde1361c821d90",
+      "matches_current_tools": true
+    }
+  },
+  "record_kind": "original_frozen_source_metadata_not_current_layout_checksum",
+  "current_layout_identity": "skill/sha256.json and root SHA256SUMS"
+}

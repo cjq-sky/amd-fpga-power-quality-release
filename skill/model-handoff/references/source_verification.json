@@ -1,0 +1,222 @@
+{
+  "date": "2026-11-02",
+  "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+  "scope": "Computer isolated-copy tests, not a new board run",
+  "results": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "recorded_output": null,
+      "recorded_console_summary": {
+        "tests": 8,
+        "elapsed_seconds": 0.024,
+        "unittest_ok": true,
+        "test_names": [
+          [
+            "test_changed_input",
+            "ok"
+          ],
+          [
+            "test_hash_and_order",
+            "ok"
+          ],
+          [
+            "test_missing_and_duplicate",
+            "ok"
+          ],
+          [
+            "test_nonfinite",
+            "ok"
+          ],
+          [
+            "test_pass",
+            "ok"
+          ],
+          [
+            "test_rejected_prediction",
+            "ok"
+          ],
+          [
+            "test_tolerance",
+            "ok"
+          ],
+          [
+            "test_wrong_class",
+            "ok"
+          ]
+        ]
+      }
+    },
+    {
+      "command": [
+        "python",
+        "scripts/compare_replay.py",
+        "--contract",
+        "examples/contract.json",
+        "--expected",
+        "examples/expected.json",
+        "--actual",
+        "examples/actual.json",
+        "--output",
+        "pass.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "recorded_output": {
+        "status": "PASS",
+        "errors": [],
+        "expected_rows": 2,
+        "actual_rows": 2,
+        "max_probability_abs_difference": 0.0,
+        "probability_tolerance": 1e-06,
+        "scope": "Numerical replay comparison only",
+        "independent_performance_assessed": false,
+        "input_sha256": {
+          "examples\\contract.json": "e692b4981002e2918be892a0a12d6feebe3cc3ce5d419a7206577ca06c8b17c0",
+          "examples\\expected.json": "7d362a2479445048b43afaad0d1c5bc64014bb7c589882b2d96a72ca538ef954",
+          "examples\\actual.json": "7d362a2479445048b43afaad0d1c5bc64014bb7c589882b2d96a72ca538ef954"
+        }
+      },
+      "recorded_console_summary": {
+        "tests": null,
+        "elapsed_seconds": null,
+        "unittest_ok": false,
+        "test_names": []
+      }
+    },
+    {
+      "command": [
+        "python",
+        "scripts/compare_replay.py",
+        "--contract",
+        "examples/contract.json",
+        "--expected",
+        "examples/expected.json",
+        "--actual",
+        "examples/bad_actual.json",
+        "--output",
+        "fail.json"
+      ],
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "recorded_output": {
+        "status": "FAIL",
+        "errors": [
+          "CLASS_MISMATCH frame_001"
+        ],
+        "expected_rows": 2,
+        "actual_rows": 2,
+        "max_probability_abs_difference": 0.0,
+        "probability_tolerance": 1e-06,
+        "scope": "Numerical replay comparison only",
+        "independent_performance_assessed": false,
+        "input_sha256": {
+          "examples\\contract.json": "e692b4981002e2918be892a0a12d6feebe3cc3ce5d419a7206577ca06c8b17c0",
+          "examples\\expected.json": "7d362a2479445048b43afaad0d1c5bc64014bb7c589882b2d96a72ca538ef954",
+          "examples\\bad_actual.json": "19eef6dd7dd980374561ac19b57a162190fe6434f5122d4358e34be34e9cdb32"
+        }
+      },
+      "recorded_console_summary": {
+        "tests": null,
+        "elapsed_seconds": null,
+        "unittest_ok": false,
+        "test_names": []
+      }
+    },
+    {
+      "command": [
+        "python",
+        "-S",
+        "examples/physical_portable_v11/verify_board.py",
+        "--output",
+        "physical.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "recorded_output": {
+        "status": "PASS",
+        "environment": {
+          "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+          "executable": "python",
+          "architecture": "AMD64",
+          "platform": "Windows-11-10.0.26300-SP0",
+          "runtime_module": "<local_path>/portable_model.py"
+        },
+        "models": {
+          "logistic_regression": {
+            "rows": 2496,
+            "class_mismatches": 0,
+            "max_probability_abs_difference": 5.551115123125783e-16,
+            "probability_tolerance": 1e-06,
+            "invalid_input_checks_pass": true,
+            "input_boundary_checks_pass": true,
+            "load_seconds": 0.0006417000040528364,
+            "predict_seconds_median": 1.2800002878066152e-05,
+            "predict_seconds_p95": 1.920000067912042e-05,
+            "predict_seconds_max": 0.00013860000035492703,
+            "timing_scope": "Python wrapper call only, not Reader/UI end-to-end",
+            "status": "PASS"
+          },
+          "random_forest": {
+            "rows": 2496,
+            "class_mismatches": 0,
+            "max_probability_abs_difference": 8.673617379884035e-19,
+            "probability_tolerance": 1e-06,
+            "invalid_input_checks_pass": true,
+            "input_boundary_checks_pass": true,
+            "load_seconds": 0.006563299997651484,
+            "predict_seconds_median": 0.00015900000289548188,
+            "predict_seconds_p95": 0.00026559999969322234,
+            "predict_seconds_max": 0.0005109999983687885,
+            "timing_scope": "Python wrapper call only, not Reader/UI end-to-end",
+            "status": "PASS"
+          }
+        },
+        "scope": "Offline TRAIN golden numerical replay; no independent classification score",
+        "live_service_tested": false,
+        "reader_ownership_tested": false,
+        "memory_tested": false
+      },
+      "recorded_console_summary": {
+        "tests": null,
+        "elapsed_seconds": null,
+        "unittest_ok": false,
+        "test_names": []
+      }
+    },
+    {
+      "command": [
+        "python",
+        "<local_path>/quick_validate.py",
+        "<local_path>/model-handoff"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "recorded_output_text": "Skill is valid!\n",
+      "recorded_console_summary": {
+        "tests": null,
+        "elapsed_seconds": null,
+        "unittest_ok": false,
+        "test_names": []
+      }
+    },
+    {
+      "test": "existing_report_rejected",
+      "exit_code": 2
+    }
+  ],
+  "record_kind": "historical_result_summary",
+  "source_sha256": "f635e339a3c4e32afecf6f5b0194aa4126f5ff892f086f4a217be2164ade90e7",
+  "normalization": "Workstation paths and raw console traces omitted; numeric results and original dates retained"
+}

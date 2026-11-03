@@ -1,0 +1,243 @@
+{
+  "policy_id": "limited_scope_label_policy",
+  "version": "1.0",
+  "title": "限定工作点谐波四分类标签门限策略",
+  "language": "zh-CN",
+  "policy_status": "FROZEN_FOR_80_RUN_LABEL_REVIEW",
+  "effective_date": "2026-11-02",
+  "decision_owner": "A / PL负责人",
+  "approval_scope": "冻结本批80条工况的限定工作点标签审核门限；不等同于80条正式标签已签核，也不单独授权启动模型训练或发布性能。",
+  "change_control": {
+    "immutable_version": true,
+    "rule": "不得直接修改本文件内容。任何门限、分类规则、适用范围或参考区间方法变更，必须创建新版本并记录变更原因、影响范围和A审批。",
+    "training_release_requires": "B提交逐Run审核结果和训练候选Manifest后，由A另行签核。"
+  },
+  "scope": {
+    "target_dataset": "2026-11-02批次80条最终选定Run",
+    "expected_run_count": 80,
+    "expected_frame_count": 2560,
+    "expected_lineage_count": 25,
+    "input_channel": "CH1",
+    "model_input_contract": {
+      "model_family": "lab07-harmonic-6d-0.1",
+      "feature_dimension": 6,
+      "feature_order": [
+        "H3_pct",
+        "H5_pct",
+        "H7_pct",
+        "H9_pct",
+        "THD_ODD_pct",
+        "Crest"
+      ],
+      "ai_channel_policy": "CH1_ONLY",
+      "note": "CH2不进入当前AI输入；本策略不将模型输入扩展为12D。"
+    },
+    "harmonic_orders_for_labeling": [
+      3,
+      5,
+      7,
+      9
+    ],
+    "operating_region": {
+      "scope": "仅适用于本批80条工况实际覆盖并经审核的受控稳定波形工作点，不得外推为全幅值、全频率或全量程计量标准。",
+      "h1_observed_envelope": {
+        "minimum": 671.804,
+        "maximum": 880.937,
+        "unit": "ADC-code RMS-equivalent band amplitude",
+        "meaning": "本批观察范围，仅作适用域描述，不是校准结果，不是H1_min，不构成新的数值门控阈值。"
+      },
+      "h1_min": null,
+      "h1_gate": "沿用现有PL numeric_valid、spectral mask、频率守卫和异常状态检查；H1必须有效且非零。不得仅凭本批观察最小值建立全局H1_min。"
+    }
+  },
+  "reference_source_and_association": {
+    "reference_instrument": "示波器CSV参考测量",
+    "reference_metric": "每个有效参考分段内的 Hk/H1 * 100%",
+    "association_status": "OPERATOR_CONFIRMED_SAME_NODE_SAME_BIN_SAME_SELECTED_RUN_SAME_SETTINGS",
+    "confirmed_scope": {
+      "selected_runs_confirmed": 80,
+      "selected_run_bin_reference_hash_matches": true,
+      "same_adc_ch1_physical_input_node": true,
+      "same_bin_and_selected_run": true,
+      "source_waveform_amplitude_frequency_offset_load_and_wiring_unchanged_between_reference_and_adc_run": true,
+      "operator_stop_sequence": "每次均在看到终端 Raw processed 16 后执行示波器 STOP；参考保存后才切换下一条工况。",
+      "known_replaced_old_attempts": {
+        "run_3": "采用 _002；旧 _001 未开启发生器输出，排除。",
+        "run_24": "采用 _002；旧 _001 示波器暂停误取消且未保存参考，排除。",
+        "run_44": "采用 _002，参考使用 44_repeat0；旧 _001 实测为H3而非预定H5，隔离。",
+        "run_46": "采用 _002；旧 _001 为误操作，隔离。"
+      }
+    },
+    "time_alignment_limits": {
+      "strict_common_clock_or_hardware_trigger_sync": false,
+      "reference_covers_all_32_adc_frames": false,
+      "allowed_interpretation": "操作者时序确认、同一实际输入节点、同一BIN/Run和设置保持不变，支持稳定周期波形的Run级形态参考关联；不得描述为独立共时钟同步，也不得声称示波器参考逐帧覆盖全部32帧。",
+      "label_granularity": "RUN_LEVEL_STABLE_WAVEFORM",
+      "frame_label_use": "只有在B确认该Run的32个有效帧均属于同一稳定设置、Raw/Feature帧关联有效且无中途切换时，才可将Run级标签作为该Run帧的派生训练标签；不得称为逐帧同步参考真值。"
+    },
+    "probe_and_voltage_scale_note": {
+      "physical_probe": "X10",
+      "oscilloscope_channel_setting_issue": "历史记录中示波器通道倍率曾设为X1；17至80号参考的绝对电压派生换算采用×10修正。精确变更时点未由操作者记忆确认。",
+      "harmonic_ratio_effect": "同一通道各谐波幅值使用相同倍率时，Hk/H1比例不受统一倍率×10影响。",
+      "handling": "保留示波器原始CSV和原始截图，不修改原件；绝对电压换算作为派生数据单独记录。44_repeat0在恢复X10要求后保存，按对应记录处理。"
+    }
+  },
+  "reference_interval_policy": {
+    "interval_name": "empirical_stable_segment_envelope",
+    "unit": "percent",
+    "definition": "对示波器CSV中经说明并保留记录的有效稳定分段，逐段计算 Hk/H1*100%；L_k为所纳入有效分段结果的最小值，U_k为最大值。",
+    "not_a_metrological_uncertainty": true,
+    "prohibited_claims": [
+      "不得将分段最小值/最大值称为完整仪器测量不确定度。",
+      "不得宣称已经完成示波器计量校准或全域测量不确定度评定。",
+      "不得为了使样本通过而事后删除不利分段。",
+      "不得用PL Feature替代独立示波器参考真值。",
+      "不得把信号源设计参数或candidate_label当作物理真值。"
+    ],
+    "required_recording": [
+      "reference_csv_path_and_sha256",
+      "channel_and_probe_settings",
+      "sample_rate_and_timebase_if_available",
+      "selected_stable_segment_start_end_or_sample_indices",
+      "segment_count_and_segment_length",
+      "excluded_segment_indices_and_reasons",
+      "per_segment_H1_H3_H5_H7_H9",
+      "per_segment_H3_H1_H5_H1_H7_H1_H9_H1_percent",
+      "L_k_and_U_k_for_each_order",
+      "method_version_and_assumptions"
+    ],
+    "invalid_interval_handling": "参考文件缺失、无法解析、无有效稳定分段、H1无效/为零、区间计算错误或关键设置无法对应时，标记REFERENCE_REVIEW，不生成正式候选类别。"
+  },
+  "thresholds": {
+    "ratio_definition": "Hk_pct = 100 * Hk / H1",
+    "per_order_thresholds": {
+      "H3": {
+        "clean_upper_inclusive_pct": 0.15,
+        "active_lower_inclusive_pct": 1.0
+      },
+      "H5": {
+        "clean_upper_inclusive_pct": 0.15,
+        "active_lower_inclusive_pct": 1.0
+      },
+      "H7": {
+        "clean_upper_inclusive_pct": 0.15,
+        "active_lower_inclusive_pct": 1.0
+      },
+      "H9": {
+        "clean_upper_inclusive_pct": 0.15,
+        "active_lower_inclusive_pct": 1.0
+      }
+    },
+    "per_order_status_rules": {
+      "CLEAN": "U_k <= 0.15%",
+      "ACTIVE": "L_k >= 1.00%",
+      "BOUNDARY": "区间有效，但既不满足CLEAN，也不满足ACTIVE；包括跨越任一门限或整体落在0.15%至1.00%之间。",
+      "REFERENCE_REVIEW": "参考区间无效或无法按本策略计算。"
+    },
+    "threshold_basis": {
+      "observed_uninjected_background_max_pct": {
+        "H3": 0.054757,
+        "H5": 0.054874,
+        "H7": 0.089321,
+        "H9": 0.066124
+      },
+      "observed_injected_min_pct": {
+        "H3": 1.980801,
+        "H5": 1.970813,
+        "H7": 4.995007,
+        "H9": 5.011037
+      },
+      "interpretation": "以上是本批80工况预审中的探索性点估计分布，用于解释0.15%与1.00%候选操作门限的选择；不是参考区间，不是测量不确定度，也不是独立验证结果。B必须用本策略规定的示波器CSV稳定分段区间逐Run重新判断。"
+    }
+  },
+  "four_class_decision_rules": {
+    "dominance_factor_D": 2,
+    "dominance_comparison_is_strict": true,
+    "H3_DOMINANT": "H3为ACTIVE，且 L3 > 2 * max(U5, U7, U9)。",
+    "H5_DOMINANT": "H5为ACTIVE，且 L5 > 2 * max(U3, U7, U9)。",
+    "MIXED": "至少两阶为稳定ACTIVE，且能够明确排除H3_DOMINANT和H5_DOMINANT；不得仅因主导条件未被证明就自动判MIXED。",
+    "CLEAN": "H3、H5、H7、H9四阶全部为稳定CLEAN。",
+    "dominance_exclusion_for_mixed": {
+      "H3_dominance_excluded": "H3为CLEAN，或 U3 <= 2 * max(L5, L7, L9)。",
+      "H5_dominance_excluded": "H5为CLEAN，或 U5 <= 2 * max(L3, L7, L9)。",
+      "rule": "只有两项均为true，且至少两阶ACTIVE，才可判MIXED；若因区间过宽而无法排除主导，标记BOUNDARY或LABEL_REVIEW。"
+    },
+    "decision_priority": [
+      "先检查所有四阶参考区间有效性；无效则REFERENCE_REVIEW。",
+      "四阶全部CLEAN，判CLEAN。",
+      "满足H3_DOMINANT，判H3_DOMINANT。",
+      "满足H5_DOMINANT，判H5_DOMINANT。",
+      "至少两阶ACTIVE且明确排除H3/H5主导，判MIXED。",
+      "只有H7或只有H9为ACTIVE、其余三阶均CLEAN时，判OUT_OF_SCOPE_CHALLENGE，不赋四分类source_label。",
+      "其他无法稳定归类的情况，判BOUNDARY或LABEL_REVIEW，不得强制归类。"
+    ],
+    "out_of_scope_cases": {
+      "H7_ONLY": "若仅H7为ACTIVE且其余三阶均CLEAN，作为挑战/范围外样本，不得强制赋四分类标签。",
+      "H9_ONLY": "若仅H9为ACTIVE且其余三阶均CLEAN，作为挑战/范围外样本，不得强制赋四分类标签。",
+      "other_unresolved": "仅H3或仅H5 ACTIVE但不满足D=2，或任何无法明确排除主导/存在边界区间的情况，进入BOUNDARY/LABEL_REVIEW。"
+    },
+    "allowed_source_labels": [
+      "CLEAN",
+      "H3_DOMINANT",
+      "H5_DOMINANT",
+      "MIXED"
+    ],
+    "non_class_outcomes": [
+      "BOUNDARY",
+      "OUT_OF_SCOPE_CHALLENGE",
+      "REFERENCE_REVIEW",
+      "LABEL_REVIEW"
+    ]
+  },
+  "label_field_separation": {
+    "candidate_label": "由AWG设计参数或生成任务形成的设计意图标签；保留原值，不作为物理真值。",
+    "proposed_source_label": "B依据本策略和独立示波器参考生成的待A审核标签。",
+    "source_label": "只有A审核通过最终Run清单后才能正式写入；在A签核前保持null。",
+    "model_prediction": "模型推理结果；不得用于生成或修正source_label。"
+  },
+  "data_integrity_and_eligibility": {
+    "expected_counts": {
+      "runs": 80,
+      "frames": 2560,
+      "lineages": 25
+    },
+    "required_checks": [
+      "selected_run、waveform_id、lineage_group_id、source_sha256、bin_sha256、reference_sha256一一对应。",
+      "Raw与Feature关联字段、Session、Epoch、Frame ID和有效帧数一致。",
+      "同一Run内帧的信号源设置未改变。",
+      "PL numeric_valid、spectral mask、频率守卫和异常状态满足既有要求。",
+      "每条Run的参考区间、四阶状态和最终建议标签可追溯。"
+    ],
+    "training_eligibility_before_A_signoff": false,
+    "split_role_before_A_signoff": null,
+    "lineage_split_rule": "同一lineage_group_id不得跨TRAIN、VALIDATION、TEST；本轮只生成TRAIN候选，不得人为拆分同源帧制造独立测试。",
+    "clean_lineage_note": "当前8个CLEAN候选工况属于S0_SINE一个谱系；可作为一个训练谱系候选，不得当作8个独立CLEAN来源。",
+    "discrepancy_review": {
+      "run_ids_or_condition_numbers": [
+        69,
+        75
+      ],
+      "lineages": [
+        "TR_MIX_04",
+        "TR_MIX_06"
+      ],
+      "handling": "设置priority_review=true并单独输出PL小谐波背景差异报告。不得自动删除整条MIXED谱系；69/75本身在A完成专项审核前不得进入TRAIN候选。"
+    }
+  },
+  "training_and_release": {
+    "current_action": "RUN_80_RUN_LABEL_AUDIT_AND_BUILD_TRAINING_CANDIDATES",
+    "model_training_authorized_by_this_file": false,
+    "release_gate": "B完成80条Run级参考区间和标签审核，提交全部输出；A签核最终标签及Manifest后，另行批准TRAINING_ONLY训练。",
+    "performance_claims": "本轮不得报告正式独立测试准确率、Macro-F1或跨来源泛化性能。",
+    "synthetic_data": "与物理实板数据分开管理，不得混淆数据来源或统计口径。"
+  },
+  "prohibited_actions": [
+    "不得修改PL、Reader、Adapter、FPGA采样时序或硬件配置。",
+    "不得为了通过门限而修改示波器原始CSV、ADC Raw或PL原始Feature。",
+    "不得覆盖历史原件或原始SHA256。",
+    "不得将candidate_label或model_prediction复制为source_label。",
+    "不得将H7-only/H9-only强制归入四类正样本。",
+    "不得将同一谱系拆分到不同数据集合。",
+    "不得在A签核前设置training_eligible=true或启动本批物理模型正式训练。"
+  ]
+}

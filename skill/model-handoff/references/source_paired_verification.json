@@ -1,0 +1,107 @@
+{
+  "date": "2026-11-02",
+  "scope": "PC saved predictions only, no hardware operations",
+  "software_tests": 14,
+  "tests_and_skill_validation": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "<local_path>/scripts",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "recorded_output": null,
+      "recorded_console_summary": {
+        "tests": 14,
+        "elapsed_seconds": 0.01,
+        "unittest_ok": true,
+        "test_names": [
+          [
+            "test_changed_input",
+            "ok"
+          ],
+          [
+            "test_hash_and_order",
+            "ok"
+          ],
+          [
+            "test_missing_and_duplicate",
+            "ok"
+          ],
+          [
+            "test_nonfinite",
+            "ok"
+          ],
+          [
+            "test_pass",
+            "ok"
+          ],
+          [
+            "test_rejected_prediction",
+            "ok"
+          ],
+          [
+            "test_tolerance",
+            "ok"
+          ],
+          [
+            "test_wrong_class",
+            "ok"
+          ],
+          [
+            "test_duplicate",
+            "ok"
+          ],
+          [
+            "test_failed_old_prediction",
+            "ok"
+          ],
+          [
+            "test_identical",
+            "ok"
+          ],
+          [
+            "test_input_mismatch",
+            "ok"
+          ],
+          [
+            "test_missing_and_rejected_stay_in_denominator",
+            "ok"
+          ],
+          [
+            "test_unapproved_labels",
+            "ok"
+          ]
+        ]
+      }
+    },
+    {
+      "command": [
+        "python",
+        "<local_path>/quick_validate.py",
+        "<local_path>/model-handoff"
+      ],
+      "exit_code": 0,
+      "recorded_output_text": "Skill is valid!\n",
+      "recorded_console_summary": {
+        "tests": null,
+        "elapsed_seconds": null,
+        "unittest_ok": false,
+        "test_names": []
+      }
+    }
+  ],
+  "EV26_common_inputs": 384,
+  "cross_check": "LR321/RF292 and all matrices/macrof1 agree with original project scorer; CLI succeeded",
+  "source_scoring_index_sha256": "823713fc81fc14bc524266cd58eb5b9b8889d6d3befea59c969efc77888dcf09",
+  "source_metrics_sha256": "18c6b2f8a8687ab148f26dad60dd4ce0f49cb773d5c39a99de5453290a499458",
+  "record_kind": "historical_result_summary",
+  "source_sha256": "5149198f097ac79779e62fd49162bcf2acd4eeb77679d0cdb9ab36fa7dac678f",
+  "normalization": "Workstation paths and raw console traces omitted; numeric results and original dates retained"
+}

@@ -1,0 +1,2 @@
+# Preserve exact frozen source, assets and identity bytes across checkout.
+* -text

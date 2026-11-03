@@ -1,0 +1,13 @@
+{
+  "confirmed_by": null,
+  "date": null,
+  "covered_run_ids": [],
+  "original_statement": null,
+  "evidence_path": null,
+  "evidence_sha256": null,
+  "same_node": null,
+  "settings_stable": null,
+  "timing_basis": null,
+  "hardware_synchronization_certified": null,
+  "limitations": []
+}

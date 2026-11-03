@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "executable": "python",
+    "architecture": "AMD64",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "runtime_module": "<local_path>/portable_model.py"
+  },
+  "models": {
+    "logistic_regression": {
+      "rows": 2496,
+      "class_mismatches": 0,
+      "max_probability_abs_difference": 5.551115123125783e-16,
+      "probability_tolerance": 1e-06,
+      "invalid_input_checks_pass": true,
+      "input_boundary_checks_pass": true,
+      "load_seconds": 0.0008319000044139102,
+      "predict_seconds_median": 1.2700002116616815e-05,
+      "predict_seconds_p95": 1.4400000509340316e-05,
+      "predict_seconds_max": 7.019999611657113e-05,
+      "timing_scope": "Python wrapper call only, not Reader/UI end-to-end",
+      "status": "PASS"
+    },
+    "random_forest": {
+      "rows": 2496,
+      "class_mismatches": 0,
+      "max_probability_abs_difference": 8.673617379884035e-19,
+      "probability_tolerance": 1e-06,
+      "invalid_input_checks_pass": true,
+      "input_boundary_checks_pass": true,
+      "load_seconds": 0.007987400000274647,
+      "predict_seconds_median": 0.00014630000077886507,
+      "predict_seconds_p95": 0.0002049000031547621,
+      "predict_seconds_max": 0.0004526999982772395,
+      "timing_scope": "Python wrapper call only, not Reader/UI end-to-end",
+      "status": "PASS"
+    }
+  },
+  "scope": "Offline TRAIN golden numerical replay; no independent classification score",
+  "live_service_tested": false,
+  "reader_ownership_tested": false,
+  "memory_tested": false,
+  "record_kind": "historical_result_summary",
+  "source_sha256": "cef413a8abdc4b570cba41db50fc3ff79d5eaddbece4721a0d8b4d22eebbea52",
+  "normalization": "Workstation paths and raw console traces omitted; numeric results and original dates retained"
+}

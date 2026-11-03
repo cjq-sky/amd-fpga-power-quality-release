@@ -1,0 +1,358 @@
+{
+  "revision": "existing_module_results_20261104",
+  "records": [
+    {
+      "id": "aggregator_directed",
+      "historical_date": "2026-11-02",
+      "tool": "Vivado Simulator 2018.2",
+      "historical_result": "PASS_WITH_RECORDED_SCOPE",
+      "stages": [
+        {
+          "stage": "b_compile",
+          "exit_code": 0,
+          "expected_marker": null,
+          "marker_found": true
+        },
+        {
+          "stage": "b_directed_elab",
+          "exit_code": 0,
+          "expected_marker": null,
+          "marker_found": true
+        },
+        {
+          "stage": "b_directed",
+          "exit_code": 0,
+          "expected_marker": "S3_S4_AGGREGATION_METADATA_PASS",
+          "marker_found": true
+        }
+      ],
+      "markers": [
+        "SIM4_TIME_FIRST_PASS",
+        "SIM4_SPECTRAL_FIRST_PASS",
+        "SIM5A_BRANCH_JUMP_PASS",
+        "SIM5B_NO_LOCKSTEP_LOSS_PASS",
+        "SIM5C_WRAP_PASS",
+        "SIM5_HELD_OUTPUT_AGE_PASS",
+        "SIM6_SAME_EDGE_AND_READ_WINDOW_PASS",
+        "SIM8_LIVE_FAULT_FROZEN_SNAPSHOT_PASS",
+        "SIM5D_ORDER_UNKNOWN_PASS",
+        "SIM5D_AGE_GUARD_PASS",
+        "S3_S4_AGGREGATION_METADATA_PASS"
+      ],
+      "marker_extract": "sim/results/aggregator_directed.txt",
+      "original_log": {
+        "sha256": "c89d6e4877f64d0a53b96359445be814e97bedb825cce03e00c977901117024f",
+        "source_name": "b_directed.log"
+      },
+      "testbench_identity_only": {
+        "sha256": "40912bb47a205c7cf1c70a25af7bdb20b0131a73f5dd9d8d0a3192341de06d70",
+        "source_name": "tb_aggregator_directed_equiv.sv"
+      },
+      "current_source_bindings": [
+        {
+          "kind": "BYTE_IDENTICAL",
+          "original": {
+            "sha256": "454aad89bd891f0823994c944e861f5b5aa03cd2dc34cc107b3a5023120e86f2",
+            "source_name": "lab07_feature_aggregator.sv"
+          },
+          "current_path": "src/pl/frame_retire_125/lab07_snapshot/02_main/lab07/07b_axi_mmio_rtl/rtl/lab07_feature_aggregator.sv",
+          "current_sha256": "454aad89bd891f0823994c944e861f5b5aa03cd2dc34cc107b3a5023120e86f2"
+        },
+        {
+          "kind": "BYTE_IDENTICAL",
+          "original": {
+            "sha256": "86c0cdee1c3fd374cc4871b13f533100f6cea2b9b42af2365e752354334133bf",
+            "source_name": "lab07_feature_snapshot_bank.sv"
+          },
+          "current_path": "src/pl/frame_retire_125/lab07_snapshot/02_main/lab07/07b_axi_mmio_rtl/rtl/lab07_feature_snapshot_bank.sv",
+          "current_sha256": "86c0cdee1c3fd374cc4871b13f533100f6cea2b9b42af2365e752354334133bf"
+        }
+      ],
+      "scope_limit": "Directed finite cases only; no integrated acquisition or board claim"
+    },
+    {
+      "id": "aggregator_random",
+      "historical_date": "2026-11-02",
+      "tool": "Vivado Simulator 2018.2",
+      "historical_result": "PASS_WITH_RECORDED_SCOPE",
+      "stages": [
+        {
+          "stage": "b_compile",
+          "exit_code": 0,
+          "expected_marker": null,
+          "marker_found": true
+        },
+        {
+          "stage": "b_random_elab",
+          "exit_code": 0,
+          "expected_marker": null,
+          "marker_found": true
+        },
+        {
+          "stage": "b_random",
+          "exit_code": 0,
+          "expected_marker": "PASS AGGREGATOR_CYCLE_EQUIV",
+          "marker_found": true
+        }
+      ],
+      "markers": [
+        "PASS AGGREGATOR_CYCLE_EQUIV cycles=100000 decisions=98969"
+      ],
+      "marker_extract": "sim/results/aggregator_random.txt",
+      "original_log": {
+        "sha256": "a84b4af8866deec6d630cedbada9a495409c2501e9b2fd6bfd229b0150f5e901",
+        "source_name": "b_random.log"
+      },
+      "testbench_identity_only": {
+        "sha256": "33b4b0d94a15e7dc24fd04153c0312c84e68393d8bf562c07b6add040a12b238",
+        "source_name": "tb_aggregator_random_equiv.sv"
+      },
+      "current_source_bindings": [
+        {
+          "kind": "BYTE_IDENTICAL",
+          "original": {
+            "sha256": "454aad89bd891f0823994c944e861f5b5aa03cd2dc34cc107b3a5023120e86f2",
+            "source_name": "lab07_feature_aggregator.sv"
+          },
+          "current_path": "src/pl/frame_retire_125/lab07_snapshot/02_main/lab07/07b_axi_mmio_rtl/rtl/lab07_feature_aggregator.sv",
+          "current_sha256": "454aad89bd891f0823994c944e861f5b5aa03cd2dc34cc107b3a5023120e86f2"
+        },
+        {
+          "kind": "BYTE_IDENTICAL",
+          "original": {
+            "sha256": "86c0cdee1c3fd374cc4871b13f533100f6cea2b9b42af2365e752354334133bf",
+            "source_name": "lab07_feature_snapshot_bank.sv"
+          },
+          "current_path": "src/pl/frame_retire_125/lab07_snapshot/02_main/lab07/07b_axi_mmio_rtl/rtl/lab07_feature_snapshot_bank.sv",
+          "current_sha256": "86c0cdee1c3fd374cc4871b13f533100f6cea2b9b42af2365e752354334133bf"
+        }
+      ],
+      "scope_limit": "Finite 100000-cycle comparison, not formal equivalence"
+    },
+    {
+      "id": "config_precompute",
+      "historical_date": "2026-11-02",
+      "tool": "Vivado Simulator 2018.2",
+      "historical_result": "PASS_WITH_RECORDED_SCOPE",
+      "stages": [
+        {
+          "stage": "compile",
+          "exit_code": 0
+        },
+        {
+          "stage": "elaborate",
+          "exit_code": 0
+        },
+        {
+          "stage": "simulate",
+          "exit_code": 0
+        }
+      ],
+      "markers": [
+        "PASS RESET_BOUNDARIES single_edge=1 partial_W=1 held_B=1 retained_prior=1",
+        "PASS PUBLIC_EQUIV samples=17729 outputs=28 pair_cases=60 XZ_base=256 XZ_generation=8",
+        "PASS CONTRACT sessions=361 checked=361 commits=2084 min_gap=3 stale_three_stage=61"
+      ],
+      "marker_extract": "sim/results/config_precompute.txt",
+      "original_log": {
+        "sha256": "0a2d85532715644a8f1b521126c02299625e3195d571a39e6950f3583b9948d4",
+        "source_name": "equiv.log"
+      },
+      "testbench_identity_only": {
+        "sha256": "6a983854864501a51726e28ea569e0ce38dc832a021c3f1038c62d9362ccfa39",
+        "source_name": "tb_precompute_equiv.sv"
+      },
+      "current_source_bindings": [
+        {
+          "kind": "BYTE_IDENTICAL",
+          "original": {
+            "sha256": "cdb3db745db2be4777a047253b87ef3883bd86f575c2bb21ae96ba515403be67",
+            "source_name": "frame_retire_registers.sv"
+          },
+          "current_path": "src/pl/frame_retire_125/candidate/rtl/frame_retire_registers.sv",
+          "current_sha256": "cdb3db745db2be4777a047253b87ef3883bd86f575c2bb21ae96ba515403be67"
+        }
+      ],
+      "scope_limit": "17729 samples/28 outputs; finite configuration/SESSION tests, not exhaustive or formal proof",
+      "prior_attempt": {
+        "initial_compile_exit": 1,
+        "scope": "Testbench diagnostic declaration order; corrected testbench and fresh retry directory, candidate RTL unchanged",
+        "expected_negative_control": "Three-stage passive counterexample is expected; not candidate mismatch",
+        "counterexample_lines": 61,
+        "formal": "NOT_PROVEN"
+      }
+    },
+    {
+      "id": "control_bridge",
+      "historical_date": "2026-11-02",
+      "tool": "Vivado Simulator 2018.2",
+      "historical_result": "PASS_WITH_RECORDED_SCOPE",
+      "stages": [
+        {
+          "stage": "bridge_compile",
+          "exit_code": 0,
+          "expected_marker": null,
+          "marker_found": true
+        },
+        {
+          "stage": "bridge_elab",
+          "exit_code": 0,
+          "expected_marker": null,
+          "marker_found": true
+        },
+        {
+          "stage": "bridge_review",
+          "exit_code": 0,
+          "expected_marker": "PASS INDEPENDENT_BRIDGE_REVIEW",
+          "marker_found": true
+        }
+      ],
+      "markers": [
+        "PASS INDEPENDENT_BRIDGE_REVIEW reads=513 writes=513 reset_inflight=1 clocks_100_142MHz"
+      ],
+      "marker_extract": "sim/results/control_bridge.txt",
+      "original_log": {
+        "sha256": "63c5999371ad0f1946f1464ea74e135fe4d2209df51e1ebd6b256b8125f9601a",
+        "source_name": "bridge_review.log"
+      },
+      "testbench_identity_only": {
+        "sha256": "ef767b27b2640dc13054f7c1ec331033dff6d9746404c906c05bb94f308bb79d",
+        "source_name": "tb_bridge_independent_review.sv"
+      },
+      "current_source_bindings": [
+        {
+          "kind": "BYTE_IDENTICAL",
+          "original": {
+            "sha256": "4ffc62ccab2073c99bcefa1a1dbfe06e0e595bdfff410d27fb09edf5ebfd8a50",
+            "source_name": "vdma_axil_snapshot_bridge.sv"
+          },
+          "current_path": "src/pl/frame_retire_125/candidate/rtl/vdma_axil_snapshot_bridge.sv",
+          "current_sha256": "4ffc62ccab2073c99bcefa1a1dbfe06e0e595bdfff410d27fb09edf5ebfd8a50"
+        }
+      ],
+      "scope_limit": "Recorded clocks 100/142MHz; identical RTL module, not the final 100/125MHz whole-system CDC signoff"
+    },
+    {
+      "id": "fence_protocol",
+      "historical_date": "2026-11-02",
+      "tool": "Vivado Simulator 2018.2",
+      "historical_result": "PASS_WITH_RECORDED_SCOPE",
+      "stages": [
+        {
+          "stage": "a_compile",
+          "exit_code": 0,
+          "expected_marker": null,
+          "marker_found": true
+        },
+        {
+          "stage": "a_fence_19_elab",
+          "exit_code": 0,
+          "expected_marker": null,
+          "marker_found": true
+        },
+        {
+          "stage": "a_fence_19",
+          "exit_code": 0,
+          "expected_marker": "PASS fence cases=19",
+          "marker_found": true
+        }
+      ],
+      "markers": [
+        "PASS fence cases=19 external_AR=153"
+      ],
+      "marker_extract": "sim/results/fence_protocol.txt",
+      "original_log": {
+        "sha256": "fe2892f23b62323982a86195f99cc461d9826e89b72e0087d765a0a1f7712a5a",
+        "source_name": "a_fence_19.log"
+      },
+      "testbench_identity_only": {
+        "sha256": "bf9fa4f34c9816ad61299d7616c3b5ea74f7c35a9e29eb9f747f89a103520207",
+        "source_name": "tb_fence_19_equiv.sv"
+      },
+      "current_source_bindings": [
+        {
+          "kind": "ONLY_DEFAULT_DEADLINE_DIFF_TEST_OVERRIDES_500",
+          "original": {
+            "sha256": "876ca594eb8086448acda1d64049458d4ec54071963442bb2076b2e3af0a5914",
+            "source_name": "frame_retire_fence.sv"
+          },
+          "current_path": "src/pl/frame_retire_125/candidate/rtl/frame_retire_fence.sv",
+          "current_sha256": "63adfa5594561a2de8bb11813743418881a02a3b4ba17d41bb6f127389d6920f",
+          "original_default_deadline": 142857132,
+          "current_default_deadline": 125000000,
+          "tested_deadline": 500,
+          "tested_frame_bytes": 256,
+          "tested_line_bytes": 64,
+          "tested_queue_depth": 64,
+          "limit": "Only the default constant differs; no rerun of current default timeout or full 720p system"
+        }
+      ],
+      "scope_limit": "19 finite cases with explicit deadline=500/frame=256/line=64; does not exercise production 125000000-cycle timeout"
+    },
+    {
+      "id": "fence_queue",
+      "historical_date": "2026-11-02",
+      "tool": "Vivado Simulator 2018.2",
+      "historical_result": "PASS_WITH_RECORDED_SCOPE",
+      "stages": [
+        {
+          "stage": "a_compile",
+          "exit_code": 0,
+          "expected_marker": null,
+          "marker_found": true
+        },
+        {
+          "stage": "a_head_stress_elab",
+          "exit_code": 0,
+          "expected_marker": null,
+          "marker_found": true
+        },
+        {
+          "stage": "a_head_stress",
+          "exit_code": 0,
+          "expected_marker": "PASS HEAD_QUEUE_EQUIV",
+          "marker_found": true
+        }
+      ],
+      "markers": [
+        "PASS HEAD_QUEUE_EQUIV cycles=48000 completed=2402 simultaneous=49 bypass=0 promotions=2390"
+      ],
+      "marker_extract": "sim/results/fence_queue.txt",
+      "original_log": {
+        "sha256": "afb3723bc77db0eb492de40c39854e4979c6f7b55b533c8ed74586546b145bb7",
+        "source_name": "a_head_stress.log"
+      },
+      "testbench_identity_only": {
+        "sha256": "59e051989d2890f813d73ad1ceae583906f384d3a9efd901bbcb07cf897cb6ab",
+        "source_name": "tb_head_queue_equiv.sv"
+      },
+      "current_source_bindings": [
+        {
+          "kind": "ONLY_DEFAULT_DEADLINE_DIFF_TEST_OVERRIDES_500",
+          "original": {
+            "sha256": "876ca594eb8086448acda1d64049458d4ec54071963442bb2076b2e3af0a5914",
+            "source_name": "frame_retire_fence.sv"
+          },
+          "current_path": "src/pl/frame_retire_125/candidate/rtl/frame_retire_fence.sv",
+          "current_sha256": "63adfa5594561a2de8bb11813743418881a02a3b4ba17d41bb6f127389d6920f",
+          "original_default_deadline": 142857132,
+          "current_default_deadline": 125000000,
+          "tested_deadline": 500,
+          "tested_frame_bytes": 256,
+          "tested_line_bytes": 64,
+          "tested_queue_depth": 64,
+          "limit": "Only the default constant differs; no rerun of current default timeout or full 720p system"
+        }
+      ],
+      "scope_limit": "48000 finite stress cycles; bypass=0 is preserved and does not demonstrate bypass coverage"
+    }
+  ],
+  "execution": "HISTORICAL_RESULTS_ONLY_NO_SIMULATION_RERUN",
+  "not_claimed": [
+    "Full 125MHz system RTL simulation",
+    "Formal proof",
+    "Board validation",
+    "Analog accuracy",
+    "Long-term stability"
+  ]
+}

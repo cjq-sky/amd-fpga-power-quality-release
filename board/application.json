@@ -1,0 +1,51 @@
+{
+  "mode": "REALTIME_FRAME_RETIRE_125",
+  "application_entry": "run.py",
+  "runtime_directory": "board/runtime/frame_retire_125",
+  "runtime_source_commit": "6fcc422f90f56e1b20854e18a28847564df03313",
+  "original_payload_manifest_sha256": "15f46b958c850f8ba25f968e0867d3abd421ef9a14b56ecede423109e9ac729f",
+  "pair_sha256": {
+    "bit": "45197bb23c05e8f8c73e4cbbced7c12ce66599a4b54a407d77fefd94a08820f4",
+    "hwh": "54980f765756f8dc64ade54af7969c7b96054c816a31d88ab9d2c07fbce05b6f"
+  },
+  "image_version": "pynq_z2_v3.1.1",
+  "environment": {
+    "machine": "armv7l",
+    "kernel": "6.6.10-xilinx-v2024.1-g3c0eca68c652",
+    "python_series": [
+      3,
+      10
+    ],
+    "recorded_versions": {
+      "pynq": "3.1.1",
+      "numpy": "1.21.5",
+      "Pillow": "9.0.1"
+    },
+    "platform_sha256": {
+      "pynq_mmio": "c9827fa71513f5e9d58022801143ca59195b55a23e73ee98bce0b98458f3321b",
+      "pynq_backend": "124511991cb3c0d15842344efb8621a5dd15fc0e5d8eb70d29cbfa81f398a12f",
+      "numpy_scalar": "d0a044512a374d93e52629c4c15c70590cb693ba99950d8c335a10f6034c362b",
+      "kernel_image": "8e380cb96c2803e1d5d1c46b1f2f8e505b4c31dcf24d68da4669be7502c6bbae",
+      "kernel_notes": "e62bb66d336c448af5d4350464fdccb1535323efc7da223438907e1b8257d1e5"
+    },
+    "chinese_font": "/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf",
+    "latin_font_optional": "/usr/share/fonts/truetype/noto/NotoSansMono-Regular.ttf"
+  },
+  "external_model_directory": "/home/xilinx/jupyter_notebooks/lab07_bai_integration/physical_portable_v11_ge8e6qs4",
+  "model_sha256": {
+    "portable_model.py": "c77263ec7dbca537d4eac1a84e012b73854c9ae66fb2ff4518e7264e0e11b323",
+    "deployment_manifest.json": "5516b50719be3a0e0cc170a96d72f2e7498686477fdf32a0297a9dcf38003928",
+    "logistic_regression.json": "06e30149cf4c469e0a3da5743c98ff87697ada7d0a6493eaa6081f88c62cb16c",
+    "random_forest.json": "e2d9eb13955713bccaf394d4d1d22b9ff32e231213f97c85359c5b7508e8f439"
+  },
+  "http": {
+    "address": "192.168.2.99",
+    "port": 8765
+  },
+  "lock_names": [
+    "pq_lab07_feature_overlay",
+    "pq_pl_programming",
+    "pq_unified2_hardware"
+  ],
+  "payload_manifest_sha256": "8f771391a2f2099ffdc1359d54bd7d31b7488d1768a7b994531cf0a7f7a6ffd9"
+}

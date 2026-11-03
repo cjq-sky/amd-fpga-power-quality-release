@@ -1,0 +1,48 @@
+{
+  "model_version": "limited-scope-physical-v1-20261102",
+  "feature_order": [
+    "H3_pct",
+    "H5_pct",
+    "H7_pct",
+    "H9_pct",
+    "THD_ODD_pct",
+    "Crest"
+  ],
+  "feature_config_version": "lab07-harmonic-6d-0.1",
+  "input_channel": "CH1",
+  "shape": [
+    6
+  ],
+  "labels": [
+    {
+      "id": 0,
+      "name": "CLEAN"
+    },
+    {
+      "id": 1,
+      "name": "H3_DOMINANT"
+    },
+    {
+      "id": 2,
+      "name": "H5_DOMINANT"
+    },
+    {
+      "id": 3,
+      "name": "MIXED"
+    }
+  ],
+  "release_scope": "TRAINING_ONLY",
+  "policy_sha256": "ecfeec9cc4555e415438a761716b7178f4b570387e35cc61a92bde4080c86cb0",
+  "training_manifest_sha256": "8b0c5ccc7a84f10906f3e6d17542013d3800f16426bacbb4d1786f58272e9185",
+  "models": {
+    "logistic_regression": "d80f589280e8b7e8941752bcf22cb0f355adeffb212def00c793c8c920dd2a96",
+    "random_forest": "cb3c26bbb015a527beae9975aa1a60705d63cd91197114006bd09ad2beed274f"
+  },
+  "dependencies": {
+    "python": "3.12.7",
+    "numpy": "1.26.4",
+    "sklearn": "1.5.1",
+    "joblib": "1.4.2"
+  },
+  "production_or_board_release": false
+}

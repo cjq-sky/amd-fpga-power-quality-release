@@ -1,0 +1,244 @@
+{
+  "date": "2026-11-02",
+  "scope": "Isolated computer tests and saved output scoring; no new acquisition",
+  "third_package_source_sha256": "d495f1b5b85d7853a4179d90ea7fb62194833be228bb49c477e5c01e0aa00bae",
+  "results": [
+    {
+      "package": "waveform-bin",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "assets/pq_wavegen",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "recorded_output": null,
+      "recorded_console_summary": {
+        "tests": 17,
+        "elapsed_seconds": 1.129,
+        "unittest_ok": true,
+        "test_names": [
+          [
+            "test_bad_profile",
+            "ok"
+          ],
+          [
+            "test_corrupt",
+            "ok"
+          ],
+          [
+            "test_generate_export_and_tamper",
+            "ok"
+          ],
+          [
+            "test_overflow",
+            "ok"
+          ],
+          [
+            "test_roundtrip",
+            "ok"
+          ],
+          [
+            "test_source_mismatch",
+            "ok"
+          ],
+          [
+            "test_cli_modes",
+            "ok"
+          ],
+          [
+            "test_bad_timing",
+            "ok"
+          ],
+          [
+            "test_harmonics_scaling_modes",
+            "ok"
+          ],
+          [
+            "test_interrupt_zero_and_residual",
+            "ok"
+          ],
+          [
+            "test_multiple",
+            "ok"
+          ],
+          [
+            "test_overlap",
+            "ok"
+          ],
+          [
+            "test_ramps",
+            "ok"
+          ],
+          [
+            "test_sag_ratio_and_baseline",
+            "ok"
+          ],
+          [
+            "test_seed_and_no_overwrite",
+            "ok"
+          ],
+          [
+            "test_steady",
+            "ok"
+          ],
+          [
+            "test_swell_bin_overflow",
+            "ok"
+          ]
+        ]
+      }
+    },
+    {
+      "package": "capture-audit",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "recorded_output": null,
+      "recorded_console_summary": {
+        "tests": 6,
+        "elapsed_seconds": 0.329,
+        "unittest_ok": true,
+        "test_names": [
+          [
+            "test_malformed",
+            "ok"
+          ],
+          [
+            "test_missing",
+            "ok"
+          ],
+          [
+            "test_path_escape",
+            "ok"
+          ],
+          [
+            "test_structure_not_approval",
+            "ok"
+          ],
+          [
+            "test_tamper_preserves_original",
+            "ok"
+          ],
+          [
+            "test_unmatched",
+            "ok"
+          ]
+        ]
+      }
+    },
+    {
+      "package": "model-handoff",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "recorded_output": null,
+      "recorded_console_summary": {
+        "tests": 14,
+        "elapsed_seconds": 0.01,
+        "unittest_ok": true,
+        "test_names": [
+          [
+            "test_changed_input",
+            "ok"
+          ],
+          [
+            "test_hash_and_order",
+            "ok"
+          ],
+          [
+            "test_missing_and_duplicate",
+            "ok"
+          ],
+          [
+            "test_nonfinite",
+            "ok"
+          ],
+          [
+            "test_pass",
+            "ok"
+          ],
+          [
+            "test_rejected_prediction",
+            "ok"
+          ],
+          [
+            "test_tolerance",
+            "ok"
+          ],
+          [
+            "test_wrong_class",
+            "ok"
+          ],
+          [
+            "test_duplicate",
+            "ok"
+          ],
+          [
+            "test_failed_old_prediction",
+            "ok"
+          ],
+          [
+            "test_identical",
+            "ok"
+          ],
+          [
+            "test_input_mismatch",
+            "ok"
+          ],
+          [
+            "test_missing_and_rejected_stay_in_denominator",
+            "ok"
+          ],
+          [
+            "test_unapproved_labels",
+            "ok"
+          ]
+        ]
+      }
+    },
+    {
+      "test": "EV26 saved results paired scoring",
+      "exit_code": 0,
+      "recorded_output": {
+        "status": "SCORED"
+      },
+      "recorded_console_summary": {
+        "tests": null,
+        "elapsed_seconds": null,
+        "unittest_ok": false,
+        "test_names": []
+      }
+    },
+    {
+      "test": "three skill formats",
+      "status": "PASS"
+    }
+  ],
+  "record_kind": "historical_result_summary",
+  "source_sha256": "e93b32cc706d9f2d088f34870c7a50e4bf01e3262a1de228f0de1dc55df104b2",
+  "normalization": "Workstation paths and raw console traces omitted; numeric results and original dates retained"
+}

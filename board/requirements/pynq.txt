@@ -1,0 +1,5 @@
+# Qualified image: pynq_z2_v3.1.1, PYNQ-Z2 / armv7l.
+# Recorded: Python 3.10.4, PYNQ 3.1.1, NumPy 1.21.5, Pillow 9.0.1.
+# Kernel/native binary hashes and required system font: board/application.json.
+# This is an environment record, not a pip-install or upgrade input.
+# Use the existing qualified image; see docs/reproducibility/environment.md.

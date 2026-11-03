@@ -1,0 +1,9 @@
+# 冻结模型
+
+original_training/保存原LR/RF joblib和model_manifest；physical_portable_v11/保存板端JSON及deployment_manifest。权重与清单按原字节保存，身份见模块sha256sums。
+
+current_engineering_candidate.json说明LR为工程候选、RF保留对照。原release_scope=TRAINING_ONLY及导出时board_verified=false保持，不将文件迁移写成正式分类验收。manifest中的golden_sha256引用外部黄金文件，模型加载不需要读取该文件。
+
+EV26同设备新参数评估为LR321/384、RF292/384；RF在H5更好，两者均有误判。该批已用于候选选择，不构成完全独立泛化测试或生产精度承诺。文件检查不执行评估或重训。
+
+训练工具仅加载可信且哈希核对过的原joblib；板端部署使用标准库代码和JSON，不安装scikit-learn/joblib。

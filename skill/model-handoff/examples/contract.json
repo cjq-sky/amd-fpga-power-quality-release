@@ -1,0 +1,18 @@
+{
+  "feature_order": [
+    "feature_a",
+    "feature_b"
+  ],
+  "units": [
+    "relative",
+    "ratio"
+  ],
+  "dtype": "float32",
+  "preprocessing_owner": "MODEL",
+  "labels": [
+    "CLASS_A",
+    "CLASS_B"
+  ],
+  "model_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "probability_tolerance": 1e-06
+}

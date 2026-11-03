@@ -1,0 +1,181 @@
+{
+  "repository": "https://github.com/Xilinx/PYNQ",
+  "commit": "d9c752164644ebdbf7f96e4cd7d96661d1276a34",
+  "files": [
+    {
+      "upstream_path": "boards/ip/axi_dynclk_v1_0/component.xml",
+      "git_blob_sha": "39375f555174234850774b60791416a6177cc27f",
+      "baseline_sha256": "1c55e1058d5d983e8e0e4e767715bbacff186aab712fb2d99333059128f143f4",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/axi_dynclk_v1_0/component.xml"
+    },
+    {
+      "upstream_path": "boards/ip/color_swap_1.1/color_swap.v",
+      "git_blob_sha": "8faf3d8ecdc2d9af5243ded7d83d6142e489e1d2",
+      "baseline_sha256": "26e66b3c876d12b4691e107c4e69847a4fdd4a0f52be385485be3c2c92274591",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/color_swap_1.1/color_swap.v"
+    },
+    {
+      "upstream_path": "boards/ip/color_swap_1.1/component.xml",
+      "git_blob_sha": "e65ceae38251a5040b94484a9fc295ce2da4a02a",
+      "baseline_sha256": "0a3c10a46aa365ecb787517b22f2a59ea7e0dfedd467a6e5a083cd4c0dd693fd",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/color_swap_1.1/component.xml"
+    },
+    {
+      "upstream_path": "boards/ip/rgb2dvi_v1_2/component.xml",
+      "git_blob_sha": "f7a7e486d306c4e1c5f48b355c7c8722414686eb",
+      "baseline_sha256": "2bf67770237c98df8a57b1cbac80cc9feb0a8ed3e73756da211ca2c0e3cc4625",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/rgb2dvi_v1_2/component.xml"
+    },
+    {
+      "upstream_path": "boards/ip/axi_dynclk_v1_0/src/axi_dynclk.vhd",
+      "git_blob_sha": "ff33770c250962dabf9a347b4afaecb25ef48db5",
+      "baseline_sha256": "4ae23b370af9802c5fea1da2c4b42775adbe914ef64ab3e2466b784d85ff0813",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/axi_dynclk_v1_0/src/axi_dynclk.vhd"
+    },
+    {
+      "upstream_path": "boards/ip/axi_dynclk_v1_0/src/axi_dynclk_S00_AXI.vhd",
+      "git_blob_sha": "4235dc77f934340807c00574a73db7fb817c9b2b",
+      "baseline_sha256": "1b6bfaca288a0bf6befdd50c9073657d931f71b0996f721ce96dd4cab88fd27c",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/axi_dynclk_v1_0/src/axi_dynclk_S00_AXI.vhd"
+    },
+    {
+      "upstream_path": "boards/ip/axi_dynclk_v1_0/src/mmcme2_drp.v",
+      "git_blob_sha": "17ad6ed205ae6769a01bb9954a57e64c769cb861",
+      "baseline_sha256": "529b531bd617f1d81d9fedd6c69d9121de96ce1b30a5872078597045dc4809a4",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/axi_dynclk_v1_0/src/mmcme2_drp.v"
+    },
+    {
+      "upstream_path": "boards/ip/axi_dynclk_v1_0/xgui/axi_dynclk_v1_0.tcl",
+      "git_blob_sha": "d5b653dd974481665fbe26bc29ff32c8973d49e5",
+      "baseline_sha256": "4bb9c490ced81d9c63ea3a6c39c3ec2a2047b5e6268fe1a6deb98b5b706da30b",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/axi_dynclk_v1_0/xgui/axi_dynclk_v1_0.tcl"
+    },
+    {
+      "upstream_path": "boards/ip/color_swap_1.1/xgui/color_swap_v1_1.tcl",
+      "git_blob_sha": "0ba26f7a87c1b6e5245c87ea0581a5188b617f5b",
+      "baseline_sha256": "e89c79a564193b631ee318bef77bb85284577edd62e293027295e3c9c92de309",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/color_swap_1.1/xgui/color_swap_v1_1.tcl"
+    },
+    {
+      "upstream_path": "boards/ip/hls/color_convert/color_convert.cpp",
+      "git_blob_sha": "d93ed803e721aab4f40055ae181432c234521c06",
+      "baseline_sha256": "7922789339f8c80101f6c4b45af2b984558fe112eb8ee0c48ed22d778be12bc0",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/hls/color_convert/color_convert.cpp"
+    },
+    {
+      "upstream_path": "boards/ip/hls/pixel_unpack/pixel_unpack.cpp",
+      "git_blob_sha": "80f1bf0007d832a17c81065772934c32eb1a2416",
+      "baseline_sha256": "0ec5476960d671051708fd0cfaff52afb1555fd2aebc55c897584271be4cae32",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/hls/pixel_unpack/pixel_unpack.cpp"
+    },
+    {
+      "upstream_path": "boards/ip/if/tmds_v1_0/tmds.xml",
+      "git_blob_sha": "b337da536a797de83dc6cd598bd6f1ebb903e23a",
+      "baseline_sha256": "af9a473b78ee521adff57bf48eba476df4e7fbd84e12b0ca86fa6874fb887c9d",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/if/tmds_v1_0/tmds.xml"
+    },
+    {
+      "upstream_path": "boards/ip/if/tmds_v1_0/tmds_rtl.xml",
+      "git_blob_sha": "bee9710bcaa75db89259c5d4cd0493d77d17fbc8",
+      "baseline_sha256": "6534a92f6e81b5aa6190b68811bf34839a613d1bfb19d0ee3b799d24b35a5b96",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/if/tmds_v1_0/tmds_rtl.xml"
+    },
+    {
+      "upstream_path": "boards/ip/rgb2dvi_v1_2/src/ClockGen.vhd",
+      "git_blob_sha": "8b877f51c8d054b1b1d0142ce624f5e1cf5e7429",
+      "baseline_sha256": "2d6353a5d3b4381493b3713c24c36943e344a1f3d7a01c3952db8bfa32e5a982",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/rgb2dvi_v1_2/src/ClockGen.vhd"
+    },
+    {
+      "upstream_path": "boards/ip/rgb2dvi_v1_2/src/DVI_Constants.vhd",
+      "git_blob_sha": "83a602e5879fc0d5eafa5c82e8f92b52a1cc82fc",
+      "baseline_sha256": "877c42710e85400d62fe7d16243a41b97f02b5ff621c8372eebee924c1136c7b",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/rgb2dvi_v1_2/src/DVI_Constants.vhd"
+    },
+    {
+      "upstream_path": "boards/ip/rgb2dvi_v1_2/src/OutputSERDES.vhd",
+      "git_blob_sha": "5f3b247f3a329943a1940fe373eacb2d290b10cc",
+      "baseline_sha256": "86bfec509f7fda63dca01c0731419989a200dd49f773ce4d3a96c4d2d2e00cc1",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/rgb2dvi_v1_2/src/OutputSERDES.vhd"
+    },
+    {
+      "upstream_path": "boards/ip/rgb2dvi_v1_2/src/rgb2dvi.vhd",
+      "git_blob_sha": "5686685cac7bf35a3ae9c458565c10e92c9ddcaf",
+      "baseline_sha256": "5c7ffeefc5ba50477637aa3bcfb17cf5a03e986b63332331b79913e7b81cff31",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/rgb2dvi_v1_2/src/rgb2dvi.vhd"
+    },
+    {
+      "upstream_path": "boards/ip/rgb2dvi_v1_2/src/rgb2dvi.xdc",
+      "git_blob_sha": "5d402efa39f082dc363263c39b753fce11283108",
+      "baseline_sha256": "7f495a8b07e54064c3b20c94a39c487411f281737bb197152e0bf92f16ebc1d0",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/rgb2dvi_v1_2/src/rgb2dvi.xdc"
+    },
+    {
+      "upstream_path": "boards/ip/rgb2dvi_v1_2/src/rgb2dvi_clocks.xdc",
+      "git_blob_sha": "b5d65a768d8687d7897c901f5507b245fec30d47",
+      "baseline_sha256": "3d734e73e9e582b262136195ebb3ac8e11b20032dabd6b3a11c3b07918f965c2",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/rgb2dvi_v1_2/src/rgb2dvi_clocks.xdc"
+    },
+    {
+      "upstream_path": "boards/ip/rgb2dvi_v1_2/src/rgb2dvi_ooc.xdc",
+      "git_blob_sha": "92c2bda1af7397575c0a4de6a9bf07a52f745903",
+      "baseline_sha256": "6c88f2ece97dc1f38a08d233b42de56975d904e055f82b011aa3d39669ccee86",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/rgb2dvi_v1_2/src/rgb2dvi_ooc.xdc"
+    },
+    {
+      "upstream_path": "boards/ip/rgb2dvi_v1_2/src/SyncAsync.vhd",
+      "git_blob_sha": "f1d7d1332c8e1baf0033e5238f5e91ad6b6eca41",
+      "baseline_sha256": "4104809471d1425e4183791decac8bbd39bb2b025a3ef735d873037392ec2d00",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/rgb2dvi_v1_2/src/SyncAsync.vhd"
+    },
+    {
+      "upstream_path": "boards/ip/rgb2dvi_v1_2/src/SyncAsyncReset.vhd",
+      "git_blob_sha": "4047c516a8af2efce5b428d386f5b1b290a64bba",
+      "baseline_sha256": "9fb781a5beae7988b9b0bef275a05aa2adecce617d298d61e61ca889cf95fcbb",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/rgb2dvi_v1_2/src/SyncAsyncReset.vhd"
+    },
+    {
+      "upstream_path": "boards/ip/rgb2dvi_v1_2/src/TMDS_Encoder.vhd",
+      "git_blob_sha": "75edeef0facbe077d09c515c435f1331f64e0303",
+      "baseline_sha256": "8c2fea9dd5d4ade222a7cb2f89ebf4b5491eb18dfaf19930ef6e53cd614ea0f1",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/rgb2dvi_v1_2/src/TMDS_Encoder.vhd"
+    },
+    {
+      "upstream_path": "boards/ip/rgb2dvi_v1_2/xgui/rgb2dvi_v1_1.tcl",
+      "git_blob_sha": "d0acae511657aa71a6b5e5623cd8de6d46621f9b",
+      "baseline_sha256": "ed9033bbf86de07cd48d4ed10728cbca59d881541a690d7744f718a18f1ac501",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/rgb2dvi_v1_2/xgui/rgb2dvi_v1_1.tcl"
+    },
+    {
+      "upstream_path": "boards/ip/rgb2dvi_v1_2/xgui/rgb2dvi_v1_2.tcl",
+      "git_blob_sha": "7e4aeeed62c173063b0091373940cdab91bcc4c4",
+      "baseline_sha256": "d947c30e08669ba0423f8fc600f53044654c1d9af83b194a4aae05c7bef58036",
+      "append_lf": true,
+      "destination": "candidate/ip/vendor/rgb2dvi_v1_2/xgui/rgb2dvi_v1_2.tcl"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "version": "physical-portable-1.1",
+  "source_model_version": "limited-scope-physical-v1-20261102",
+  "models": {
+    "logistic_regression": {
+      "file": "logistic_regression.json",
+      "sha256": "06e30149cf4c469e0a3da5743c98ff87697ada7d0a6493eaa6081f88c62cb16c",
+      "original_model_sha256": "d80f589280e8b7e8941752bcf22cb0f355adeffb212def00c793c8c920dd2a96"
+    },
+    "random_forest": {
+      "file": "random_forest.json",
+      "sha256": "e2d9eb13955713bccaf394d4d1d22b9ff32e231213f97c85359c5b7508e8f439",
+      "original_model_sha256": "cb3c26bbb015a527beae9975aa1a60705d63cd91197114006bd09ad2beed274f"
+    }
+  },
+  "dependencies": "Python 3.10+ standard library only",
+  "golden_sha256": "a35bd376648f9cdfc8362fea781ac2079822bd0ced8b8853fa6952bf6befe12e",
+  "release_scope": "TRAINING_ONLY",
+  "board_verified": false
+}

@@ -1,0 +1,60 @@
+{
+  "description": "Team Frame Retire modifications only; apply to lawfully installed Vivado 2018.2 VDMA",
+  "input_relative_to_vivado": "data/ip/xilinx/axi_vdma_v6_3/hdl/axi_vdma_v6_3_rfs.vhd",
+  "base_sha256": "a180b97756081106fc48be6531d78d044268ab9e3cb34dcc556e3f8e9ce3745a",
+  "result_sha256": "1d8c313b9a9e2dae981230ffbf033ef4fa7d2f30252827652d1bedb478722c08",
+  "line_number_basis": "zero-based, universal-newline normalized source; apply in reverse order",
+  "output_newlines": "CRLF",
+  "changes": [
+    {
+      "start": 61769,
+      "end": 61769,
+      "insert": "        -- Candidate-only frame ownership observation/control ports.\n        fr_enable : in std_logic := '0';\n        fr_expected_height : in std_logic_vector(12 downto 0) := std_logic_vector(to_unsigned(720,13));\n        fr_base : in std_logic_vector(31 downto 0) := (others => '0');\n        fr_frame_start : out std_logic;\n        fr_command_generate : out std_logic;\n        fr_last_command : out std_logic;\n        fr_geometry_good : out std_logic;\n        fr_abort : out std_logic;\n\n"
+    },
+    {
+      "start": 61942,
+      "end": 61942,
+      "insert": "fr_frame_start <= load_new_addr;\nfr_command_generate <= write_cmnd_cmb;\nfr_last_command <= '1' when write_cmnd_cmb='1' and unsigned(vert_count)=1 else '0';\nfr_geometry_good <= '1' when unsigned(crnt_hsize)=3840 and unsigned(crnt_vsize)=unsigned(fr_expected_height) and unsigned(crnt_stride)=3840 else '0';\nfr_abort <= stop or halt;\n\n"
+    },
+    {
+      "start": 62223,
+      "end": 62224,
+      "insert": "                if fr_enable='1' then dm_address <= fr_base; else dm_address <= crnt_start_address; end if;\n"
+    },
+    {
+      "start": 64018,
+      "end": 64018,
+      "insert": "        -- Candidate-only frame ownership observation/control ports.\n        fr_enable : in std_logic := '0';\n        fr_expected_height : in std_logic_vector(12 downto 0) := std_logic_vector(to_unsigned(720,13));\n        fr_base : in std_logic_vector(31 downto 0) := (others => '0');\n        fr_frame_start : out std_logic;\n        fr_command_generate : out std_logic;\n        fr_last_command : out std_logic;\n        fr_geometry_good : out std_logic;\n        fr_abort : out std_logic;\n\n"
+    },
+    {
+      "start": 65709,
+      "end": 65709,
+      "insert": "            fr_enable => fr_enable, fr_expected_height => fr_expected_height, fr_base => fr_base,\n            fr_frame_start => fr_frame_start,\n            fr_command_generate => fr_command_generate,\n            fr_last_command => fr_last_command,\n            fr_geometry_good => fr_geometry_good, fr_abort => fr_abort,\n\n"
+    },
+    {
+      "start": 68011,
+      "end": 68011,
+      "insert": "            fr_enable => '0', fr_base => (others => '0'),\n            fr_frame_start => open, fr_command_generate => open,\n            fr_last_command => open, fr_geometry_good => open, fr_abort => open,\n\n"
+    },
+    {
+      "start": 69656,
+      "end": 69656,
+      "insert": "        fr_dm_accept : out std_logic;\n        fr_status_accept : out std_logic;\n        fr_status_data : out std_logic_vector(7 downto 0);\n\n        -- Candidate-only frame ownership observation/control ports.\n        fr_enable : in std_logic := '0';\n        fr_expected_height : in std_logic_vector(12 downto 0) := std_logic_vector(to_unsigned(720,13));\n        fr_base : in std_logic_vector(31 downto 0) := (others => '0');\n        fr_frame_start : out std_logic;\n        fr_command_generate : out std_logic;\n        fr_last_command : out std_logic;\n        fr_geometry_good : out std_logic;\n        fr_abort : out std_logic;\n\n"
+    },
+    {
+      "start": 70628,
+      "end": 70628,
+      "insert": "fr_dm_accept <= s_axis_mm2s_cmd_tvalid and s_axis_mm2s_cmd_tready;\nfr_status_accept <= m_axis_mm2s_sts_tvalid and m_axis_mm2s_sts_tready;\nfr_status_data <= m_axis_mm2s_sts_tdata(7 downto 0);\n\n"
+    },
+    {
+      "start": 71773,
+      "end": 71773,
+      "insert": "            fr_enable => fr_enable, fr_expected_height => fr_expected_height, fr_base => fr_base,\n            fr_frame_start => fr_frame_start,\n            fr_command_generate => fr_command_generate,\n            fr_last_command => fr_last_command,\n            fr_geometry_good => fr_geometry_good, fr_abort => fr_abort,\n\n"
+    },
+    {
+      "start": 73483,
+      "end": 73483,
+      "insert": "            fr_enable => '0', fr_base => (others => '0'),\n            fr_frame_start => open, fr_command_generate => open,\n            fr_last_command => open, fr_geometry_good => open, fr_abort => open,\n\n"
+    }
+  ]
+}

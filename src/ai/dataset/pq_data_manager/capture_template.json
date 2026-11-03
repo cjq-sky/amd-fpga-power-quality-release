@@ -1,0 +1,64 @@
+{
+  "record_id": null,
+  "waveform_id": null,
+  "parameter_set_id": null,
+  "lineage_group_id": null,
+  "run_id": null,
+  "session_id": null,
+  "device_id": null,
+  "channel": "CH1",
+  "source_type": "awg_replay_parametric",
+  "split_role": "calibration_dev",
+  "label_status": "LABEL_REVIEW",
+  "label_spec_version": null,
+  "adapter_version": "lab07-harmonic-adapter-0.5",
+  "feature_config_version": "lab07-harmonic-6d-0.1",
+  "abi_version": "2.1",
+  "bit_sha256": null,
+  "hwh_sha256": null,
+  "label": null,
+  "awg": {
+    "model": null,
+    "load": null,
+    "offset_v": null,
+    "whole_waveform_vpp": null,
+    "record_period_s": null
+  },
+  "adc": {
+    "range_v": [
+      -10,
+      10
+    ],
+    "sample_rate_hz": null
+  },
+  "association": {
+    "status": null,
+    "evidence": null,
+    "epoch": null,
+    "source_frame": null,
+    "raw_identity": null,
+    "feature_identity": null
+  },
+  "files": [
+    {
+      "role": "source_waveform",
+      "path": null,
+      "sha256": null
+    },
+    {
+      "role": "raw",
+      "path": null,
+      "sha256": null
+    },
+    {
+      "role": "feature",
+      "path": null,
+      "sha256": null
+    },
+    {
+      "role": "reference",
+      "path": null,
+      "sha256": null
+    }
+  ]
+}

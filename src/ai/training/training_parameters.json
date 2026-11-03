@@ -1,0 +1,29 @@
+{
+  "origin": "Actual limited-scope-physical-v1-20261102 training settings; no training performed during upload preparation",
+  "environment": {
+    "python": "3.12.7",
+    "numpy": "1.26.4",
+    "sklearn": "1.5.1",
+    "joblib": "1.4.2"
+  },
+  "features": "../preprocessing/feature_contract.json",
+  "seed": 20261102,
+  "sample_weight": "1/qualified frame count in each lineage; normalize to mean sample weight1; same weights apply LR scaler and classifier",
+  "all_qualified_rows_role": "TRAINING_ONLY",
+  "split_by_random_frames": false,
+  "logistic_regression": {
+    "preprocessor": "StandardScaler",
+    "max_iter": 3000,
+    "random_state": 20261102,
+    "other_parameters": "sklearn1.5.1 defaults"
+  },
+  "random_forest": {
+    "n_estimators": 160,
+    "max_depth": 12,
+    "min_samples_leaf": 2,
+    "n_jobs": 1,
+    "random_state": 20261102,
+    "other_parameters": "sklearn1.5.1 defaults"
+  },
+  "training_script_distribution": "PACKAGED_PARAMETERIZED_ENTRY; TRAINING_NOT_RERUN"
+}

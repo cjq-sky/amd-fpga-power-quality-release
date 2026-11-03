@@ -1,0 +1,12 @@
+{
+ "split_role":"calibration_dev","sample_rate_hz":10000,"duration_s":1,"fundamental_hz":50,
+ "cases":[
+  {"id":"EV_NORMAL","lineage_group_id":"S0_SINE"},
+  {"id":"EV_SAG50","events":[{"kind":"sag","start_s":0.3,"duration_s":0.1,"level":0.5}]},
+  {"id":"EV_SWELL115","events":[{"kind":"swell","start_s":0.3,"duration_s":0.1,"level":1.15,"ramp_in_s":0.002,"ramp_out_s":0.002}]},
+  {"id":"EV_INTERRUPT","events":[{"kind":"interruption","start_s":0.3,"duration_s":0.1,"level":0}]},
+  {"id":"EV_SAG_H35","harmonics":{"3":{"ratio":0.05},"5":{"ratio":0.05}},"events":[{"kind":"sag","start_s":0.3,"duration_s":0.1,"level":0.5}]},
+  {"id":"EV_SWELL_H3","harmonics":{"3":{"ratio":0.1}},"events":[{"kind":"swell","start_s":0.3,"duration_s":0.1,"level":1.15}]},
+  {"id":"EV_SEQUENCE","events":[{"kind":"sag","start_s":0.2,"duration_s":0.1,"level":0.7},{"kind":"swell","start_s":0.5,"duration_s":0.1,"level":1.2},{"kind":"interruption","start_s":0.8,"duration_s":0.1,"level":0}]}
+ ]
+}

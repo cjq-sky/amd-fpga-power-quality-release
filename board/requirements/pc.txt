@@ -1,0 +1,4 @@
+# PC browser display requires network access to the board; no Python packages.
+# Root run.py --check / --plan requires Python 3.10+ standard library only.
+# Optional offline training dependencies: src/ai/training/requirements.txt.
+# This file is an environment note, not a pip-install input.

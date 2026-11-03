@@ -1,0 +1,30 @@
+{
+  "revision": "frame_retire_fclk1_125_source_20261103",
+  "source_candidate": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+  "release": "FINAL_FRAME_RETIRE_FCLK1_125_RELEASE_1",
+  "device": "xc7z020clg400-1",
+  "tool": "Vivado 2018.2",
+  "fclk0_hz": 100000000,
+  "fclk1_hz": 125000000,
+  "independent_h16_hz": 125000000,
+  "deadline_cycles": 125000000,
+  "queue_depth": 64,
+  "approved_bit_sha256": "45197bb23c05e8f8c73e4cbbced7c12ce66599a4b54a407d77fefd94a08820f4",
+  "approved_hwh_sha256": "54980f765756f8dc64ade54af7969c7b96054c816a31d88ab9d2c07fbce05b6f",
+  "approved_routed_dcp_sha256": "51034a1528d12ee76214c58f53b33089fb280d0da81908ca9221e15c4ea22df0",
+  "raw_hwh_sha256": "858a9f807b7a1af973db03f08d0aa65601df155e59724bfa66d6862cf5c72670",
+  "bd_sha256": "106ebdc243eae39d1ae5dfb83b98b6193d39f6f4b31edcf3b86eb235023dd5fc",
+  "relation": "Original release identity bound to the maintained repository pair; no new board execution",
+  "frozen_original_input_count": 199,
+  "frozen_all_build_input_count": 514,
+  "actual_synthesis_source_unique_count": 131,
+  "source_check": "PASS_199_AND_514_UNCHANGED",
+  "new_build": "NOT_RUN",
+  "hls_regeneration": "NOT_RUN",
+  "board": "NOT_RUN",
+  "external_io_signoff": "OPEN",
+  "repository_pair": {
+    "bit": "board/runtime/frame_retire_125/final_frame_retire_fclk1_125.bit",
+    "hwh": "board/runtime/frame_retire_125/final_frame_retire_fclk1_125.hwh"
+  }
+}

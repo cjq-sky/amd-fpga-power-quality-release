@@ -1,0 +1,50 @@
+{
+  "waveform_id": "EXAMPLE",
+  "parameter_set_id": "PARAM",
+  "lineage_group_id": "EXAMPLE_PARENT",
+  "source_type": "synthetic_fixture",
+  "waveform_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "record_id": "GOOD",
+  "run_id": "GOOD",
+  "session_id": "SOFTWARE_EXAMPLE",
+  "device_id": "FIXTURE_ONLY",
+  "schema_version": "capture-registration-0.1",
+  "source_manifest_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "firmware_bit_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "firmware_hwh_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "split_role": "calibration_dev",
+  "abi_version": "EXAMPLE",
+  "adapter_version": "EXAMPLE",
+  "capture_status": "CAPTURED",
+  "association": "offline_verified_same_frame",
+  "awg_actual_settings": {
+    "basis": "SOFTWARE_FIXTURE_ONLY_NO_REAL_CAPTURE"
+  },
+  "independent_output_verification": {
+    "basis": "SOFTWARE_FIXTURE_ONLY_NO_REAL_CAPTURE"
+  },
+  "adc_actual_configuration": {
+    "basis": "SOFTWARE_FIXTURE_ONLY_NO_REAL_CAPTURE"
+  },
+  "frame_association_evidence": {
+    "basis": "SOFTWARE_FIXTURE_ONLY_NO_REAL_CAPTURE"
+  },
+  "raw_files": [
+    {
+      "path": "raw/fixture.txt",
+      "sha256": "f4f0c1ca7ce2ad103e62fdea5bc017eceb0d0c719328cd468cfcc1da9902da28"
+    }
+  ],
+  "feature_files": [
+    {
+      "path": "feature/fixture.txt",
+      "sha256": "5433487e4c9538c10924d337c20814497196d418dbe69a97354d2e3e972ad6db"
+    }
+  ],
+  "reference_files": [
+    {
+      "path": "reference/fixture.txt",
+      "sha256": "a6d6b3b6070c368a356da3e194ed8ca4193807227d414f54b565377517af0918"
+    }
+  ]
+}

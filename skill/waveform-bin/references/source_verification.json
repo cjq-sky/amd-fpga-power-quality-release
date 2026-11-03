@@ -1,0 +1,141 @@
+{
+  "date": "2026-11-02",
+  "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+  "scope": "Isolated copied package, software only",
+  "results": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "assets/pq_wavegen",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "recorded_output": null,
+      "recorded_console_summary": {
+        "tests": 17,
+        "elapsed_seconds": 1.077,
+        "unittest_ok": true,
+        "test_names": [
+          [
+            "test_bad_profile",
+            "ok"
+          ],
+          [
+            "test_corrupt",
+            "ok"
+          ],
+          [
+            "test_generate_export_and_tamper",
+            "ok"
+          ],
+          [
+            "test_overflow",
+            "ok"
+          ],
+          [
+            "test_roundtrip",
+            "ok"
+          ],
+          [
+            "test_source_mismatch",
+            "ok"
+          ],
+          [
+            "test_cli_modes",
+            "ok"
+          ],
+          [
+            "test_bad_timing",
+            "ok"
+          ],
+          [
+            "test_harmonics_scaling_modes",
+            "ok"
+          ],
+          [
+            "test_interrupt_zero_and_residual",
+            "ok"
+          ],
+          [
+            "test_multiple",
+            "ok"
+          ],
+          [
+            "test_overlap",
+            "ok"
+          ],
+          [
+            "test_ramps",
+            "ok"
+          ],
+          [
+            "test_sag_ratio_and_baseline",
+            "ok"
+          ],
+          [
+            "test_seed_and_no_overwrite",
+            "ok"
+          ],
+          [
+            "test_steady",
+            "ok"
+          ],
+          [
+            "test_swell_bin_overflow",
+            "ok"
+          ]
+        ]
+      }
+    },
+    {
+      "command": [
+        "python",
+        "assets/pq_wavegen/wavegen.py",
+        "--config",
+        "examples/minimal.json",
+        "--output",
+        "run_001"
+      ],
+      "exit_code": 0,
+      "recorded_output": {
+        "count": 2,
+        "unique_numeric_waveforms": 2,
+        "software_validation": "PASS",
+        "bin_generated": false,
+        "bin_software_validation": "NOT_EXECUTED",
+        "hardware_validation": "NOT_EXECUTED",
+        "formal_training_ready": false
+      },
+      "recorded_console_summary": {
+        "tests": null,
+        "elapsed_seconds": null,
+        "unittest_ok": false,
+        "test_names": []
+      }
+    },
+    {
+      "command": [
+        "python",
+        "<local_path>/quick_validate.py",
+        "<local_path>/waveform-bin"
+      ],
+      "exit_code": 0,
+      "recorded_output_text": "Skill is valid!\n",
+      "recorded_console_summary": {
+        "tests": null,
+        "elapsed_seconds": null,
+        "unittest_ok": false,
+        "test_names": []
+      }
+    }
+  ],
+  "record_kind": "historical_result_summary",
+  "source_sha256": "231ab31785a39898685832a0e3d2602e599eb28b36d5b56d0bbe197e7c7c9a03",
+  "normalization": "Workstation paths and raw console traces omitted; numeric results and original dates retained"
+}

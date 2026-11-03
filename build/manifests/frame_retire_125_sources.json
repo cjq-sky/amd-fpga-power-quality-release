@@ -1,0 +1,736 @@
+{
+  "revision": "frame_retire_fclk1_125_integrated_20261103",
+  "original_source_records": [
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/01_lab/03_ad7606_dual/rtl/ad7606_controller.v",
+      "source_sha256": "fbe6f6c44a7f1729e74c6c7902c7ef448aa57d6fd36b86fe22c62cb37d90f1f7",
+      "sha256": "fbe6f6c44a7f1729e74c6c7902c7ef448aa57d6fd36b86fe22c62cb37d90f1f7",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/01_lab/03_ad7606_dual/rtl/ad7606_controller.v"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/01_lab/04_fifo_bram/rtl/lab04_bram_bank.v",
+      "source_sha256": "c079cf00b2baddd2e4f070732dc7d0772d5ae6bc1c6b3a5b96fbd7fb3abfe18b",
+      "sha256": "c079cf00b2baddd2e4f070732dc7d0772d5ae6bc1c6b3a5b96fbd7fb3abfe18b",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/01_lab/04_fifo_bram/rtl/lab04_bram_bank.v"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/01_lab/04_fifo_bram/rtl/lab04_source_monitor.v",
+      "source_sha256": "4aa6c3436e5babfcdda46cff5bd1cffd999f2f360c0a06a49908caff7e6122db",
+      "sha256": "4aa6c3436e5babfcdda46cff5bd1cffd999f2f360c0a06a49908caff7e6122db",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/01_lab/04_fifo_bram/rtl/lab04_source_monitor.v"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/01_lab/04_fifo_bram/rtl/lab04_raw_transport.v",
+      "source_sha256": "85507f194dfeda2a2a8ea87a2706278941d605a724c3cfbfdb5f040bb8fd3bbb",
+      "sha256": "85507f194dfeda2a2a8ea87a2706278941d605a724c3cfbfdb5f040bb8fd3bbb",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/01_lab/04_fifo_bram/rtl/lab04_raw_transport.v"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/01_lab/05_rms_freq/rtl/lab05_udiv.sv",
+      "source_sha256": "cce630e5326c105aae694caaab63257bcf3f31f1ad946f722e6ed096ed737b43",
+      "sha256": "cce630e5326c105aae694caaab63257bcf3f31f1ad946f722e6ed096ed737b43",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/01_lab/05_rms_freq/rtl/lab05_udiv.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/01_lab/05_rms_freq/rtl/lab05_isqrt.sv",
+      "source_sha256": "0c154f212c650ab65e043bf73533642df7cc6b6a0d9b681074a0d0969e64f2e0",
+      "sha256": "0c154f212c650ab65e043bf73533642df7cc6b6a0d9b681074a0d0969e64f2e0",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/01_lab/05_rms_freq/rtl/lab05_isqrt.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/01_lab/05_rms_freq/rtl/lab05_frame_stats.sv",
+      "source_sha256": "64ed74449ebe5105b8e7b6b55c28c130733a68eadbc652922f18e5ea7b476f4b",
+      "sha256": "64ed74449ebe5105b8e7b6b55c28c130733a68eadbc652922f18e5ea7b476f4b",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/01_lab/05_rms_freq/rtl/lab05_frame_stats.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/01_lab/05_rms_freq/rtl/lab05_feature_scheduler.sv",
+      "source_sha256": "3d811dd67f8b469e7601bd1e7a18ec0f3aac4054aaac89ca89bdfaedb6524c48",
+      "sha256": "3d811dd67f8b469e7601bd1e7a18ec0f3aac4054aaac89ca89bdfaedb6524c48",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/01_lab/05_rms_freq/rtl/lab05_feature_scheduler.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/01_lab/05_rms_freq/rtl/lab05_basic_features_top.sv",
+      "source_sha256": "42080a051f4d315ffa83a9092ef672aa90c4ddb229453b3d55b6bd0fc876efec",
+      "sha256": "42080a051f4d315ffa83a9092ef672aa90c4ddb229453b3d55b6bd0fc876efec",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/01_lab/05_rms_freq/rtl/lab05_basic_features_top.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/01_lab/05_rms_freq/integration/lab05_sample_boundary.sv",
+      "source_sha256": "533805710836496c1f92760457d7acf93c03eefc4f1a74b1d30350ebebd39d7d",
+      "sha256": "533805710836496c1f92760457d7acf93c03eefc4f1a74b1d30350ebebd39d7d",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/01_lab/05_rms_freq/integration/lab05_sample_boundary.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/01_lab/06_fft_demo/rtl/lab06_uint_math.sv",
+      "source_sha256": "5e319e5ecc850b6f9677abdd4f6299beca6bfb0bd2349d2f930bfe4f8ef910c4",
+      "sha256": "5e319e5ecc850b6f9677abdd4f6299beca6bfb0bd2349d2f930bfe4f8ef910c4",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/01_lab/06_fft_demo/rtl/lab06_uint_math.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/01_lab/06_fft_demo/rtl/lab06_frame_buffer.sv",
+      "source_sha256": "f2984cc0532fc08b0c4fdaebf6d65d92f7b1adbd500db61187a7e994d52dddf2",
+      "sha256": "f2984cc0532fc08b0c4fdaebf6d65d92f7b1adbd500db61187a7e994d52dddf2",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/01_lab/06_fft_demo/rtl/lab06_frame_buffer.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/01_lab/06_fft_demo/rtl/lab06_preprocess.sv",
+      "source_sha256": "17650f658122f0719f17945aea0fb126a00c4ea415dcec7a87168e0334545438",
+      "sha256": "17650f658122f0719f17945aea0fb126a00c4ea415dcec7a87168e0334545438",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/01_lab/06_fft_demo/rtl/lab06_preprocess.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/01_lab/06_fft_demo/rtl/lab06_fft_transaction.sv",
+      "source_sha256": "43713639244baf5675f7c572c535999c8bbb20cb553b6ab606d355ad9d501065",
+      "sha256": "43713639244baf5675f7c572c535999c8bbb20cb553b6ab606d355ad9d501065",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/01_lab/06_fft_demo/rtl/lab06_fft_transaction.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/01_lab/06_fft_demo/rtl/lab06_spectrum_features.sv",
+      "source_sha256": "206863faa030e69db2ef2d6e067e39cbfcfa5a3c0990a1d24db4f59aed95224d",
+      "sha256": "206863faa030e69db2ef2d6e067e39cbfcfa5a3c0990a1d24db4f59aed95224d",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/01_lab/06_fft_demo/rtl/lab06_spectrum_features.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/01_lab/06_fft_demo/integration/lab06_sample_boundary.sv",
+      "source_sha256": "89042b77d603690454243a03ec0111c665f6d6a43681bd2d95a1bcaff965f5ac",
+      "sha256": "89042b77d603690454243a03ec0111c665f6d6a43681bd2d95a1bcaff965f5ac",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/01_lab/06_fft_demo/integration/lab06_sample_boundary.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/02_main/pre_lab07/rtl/raw_frame_bank_manager.sv",
+      "source_sha256": "9386af71d8ccfa61e391ee2eafff89d6d59921f3e3c3852fbdaa7db7ed85a2ae",
+      "sha256": "9386af71d8ccfa61e391ee2eafff89d6d59921f3e3c3852fbdaa7db7ed85a2ae",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/02_main/pre_lab07/rtl/raw_frame_bank_manager.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/02_main/lab07/07b_axi_mmio_rtl/rtl/lab07_main.sv",
+      "source_sha256": "f67669ecc55e6ae79456d36d5e5549b124c7198ec4da0dce1a3f158bd7a893e9",
+      "sha256": "f67669ecc55e6ae79456d36d5e5549b124c7198ec4da0dce1a3f158bd7a893e9",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/02_main/lab07/07b_axi_mmio_rtl/rtl/lab07_main.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/02_main/lab07/07c0_system_build_timing/rtl/lab07_spectral_publication_top.sv",
+      "source_sha256": "453627f65aa1419472ddbc407ca67ce53ba960923111c2a9fc69909ff4f848f0",
+      "sha256": "453627f65aa1419472ddbc407ca67ce53ba960923111c2a9fc69909ff4f848f0",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/02_main/lab07/07c0_system_build_timing/rtl/lab07_spectral_publication_top.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/02_main/lab07/07b_axi_mmio_rtl/rtl/lab07_feature_aggregator.sv",
+      "source_sha256": "454aad89bd891f0823994c944e861f5b5aa03cd2dc34cc107b3a5023120e86f2",
+      "sha256": "454aad89bd891f0823994c944e861f5b5aa03cd2dc34cc107b3a5023120e86f2",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/02_main/lab07/07b_axi_mmio_rtl/rtl/lab07_feature_aggregator.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/02_main/lab07/07b_axi_mmio_rtl/rtl/lab07_feature_snapshot_bank.sv",
+      "source_sha256": "86c0cdee1c3fd374cc4871b13f533100f6cea2b9b42af2365e752354334133bf",
+      "sha256": "86c0cdee1c3fd374cc4871b13f533100f6cea2b9b42af2365e752354334133bf",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/02_main/lab07/07b_axi_mmio_rtl/rtl/lab07_feature_snapshot_bank.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/02_main/lab07/07d_c0_system_build_timing/rtl/lab07_dc0_feature.sv",
+      "source_sha256": "416f3cedd72e931e6d605bd5b51880ade69fbc60b44b2387ab67d5fb4d3389eb",
+      "sha256": "416f3cedd72e931e6d605bd5b51880ade69fbc60b44b2387ab67d5fb4d3389eb",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/02_main/lab07/07d_c0_system_build_timing/rtl/lab07_dc0_feature.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/02_main/lab07/07d_c0_system_build_timing/rtl/lab07_dc0_raw.sv",
+      "source_sha256": "00e0d6a9b80fcfc8a5ae38c70385eec4433fea7746a6fbe37f3b3a87629d8925",
+      "sha256": "00e0d6a9b80fcfc8a5ae38c70385eec4433fea7746a6fbe37f3b3a87629d8925",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/02_main/lab07/07d_c0_system_build_timing/rtl/lab07_dc0_raw.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/02_main/lab07/07d_raw_readout_rtl/rtl/lab07_d_feature_slave.sv",
+      "source_sha256": "00bfbb16481fcecce1ff9dee8384894a972dbc4031ebbe8c5cfb427907106fce",
+      "sha256": "00bfbb16481fcecce1ff9dee8384894a972dbc4031ebbe8c5cfb427907106fce",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/02_main/lab07/07d_raw_readout_rtl/rtl/lab07_d_feature_slave.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/02_main/lab07/07d_raw_readout_rtl/rtl/lab07_d_main_top.sv",
+      "source_sha256": "89a799426ea07884abc7b00fa9860ab4674ff6f601ee19806ec1443ada3e3fcc",
+      "sha256": "89a799426ea07884abc7b00fa9860ab4674ff6f601ee19806ec1443ada3e3fcc",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/02_main/lab07/07d_raw_readout_rtl/rtl/lab07_d_main_top.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/02_main/lab07/07d_raw_readout_rtl/rtl/lab07_raw_control.sv",
+      "source_sha256": "b014c5e7dbb26667d69f098914c8e426ca091074a3475af5d5131389dc8f66bf",
+      "sha256": "b014c5e7dbb26667d69f098914c8e426ca091074a3475af5d5131389dc8f66bf",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/02_main/lab07/07d_raw_readout_rtl/rtl/lab07_raw_control.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_snapshot/02_main/lab07/07d_raw_readout_rtl/rtl/lab07_raw_memory_bridge.sv",
+      "source_sha256": "232f0694a86dd9528b05975af208f69624487cbec12a8dbaea1a610235a2a6d3",
+      "sha256": "232f0694a86dd9528b05975af208f69624487cbec12a8dbaea1a610235a2a6d3",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_snapshot/02_main/lab07/07d_raw_readout_rtl/rtl/lab07_raw_memory_bridge.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_ip_repo/lab07_feature_mmio/component.xml",
+      "source_sha256": "001deb157155e0bf1bb99cc41443df2ebc8c24dbe6f4efa025d3bf19e5995847",
+      "sha256": "001deb157155e0bf1bb99cc41443df2ebc8c24dbe6f4efa025d3bf19e5995847",
+      "derived": false,
+      "note": "sim/ contains design RTL referenced by IP metadata, not testbenches",
+      "path": "src/pl/frame_retire_125/lab07_ip_repo/lab07_feature_mmio/component.xml"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_ip_repo/lab07_feature_mmio/sim/lab07_d_feature_slave.sv",
+      "source_sha256": "00bfbb16481fcecce1ff9dee8384894a972dbc4031ebbe8c5cfb427907106fce",
+      "sha256": "00bfbb16481fcecce1ff9dee8384894a972dbc4031ebbe8c5cfb427907106fce",
+      "derived": false,
+      "note": "sim/ contains design RTL referenced by IP metadata, not testbenches",
+      "path": "src/pl/frame_retire_125/lab07_ip_repo/lab07_feature_mmio/sim/lab07_d_feature_slave.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_ip_repo/lab07_feature_mmio/sim/lab07_dc0_feature.sv",
+      "source_sha256": "416f3cedd72e931e6d605bd5b51880ade69fbc60b44b2387ab67d5fb4d3389eb",
+      "sha256": "416f3cedd72e931e6d605bd5b51880ade69fbc60b44b2387ab67d5fb4d3389eb",
+      "derived": false,
+      "note": "sim/ contains design RTL referenced by IP metadata, not testbenches",
+      "path": "src/pl/frame_retire_125/lab07_ip_repo/lab07_feature_mmio/sim/lab07_dc0_feature.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_ip_repo/lab07_feature_mmio/sim/lab07_raw_control.sv",
+      "source_sha256": "b014c5e7dbb26667d69f098914c8e426ca091074a3475af5d5131389dc8f66bf",
+      "sha256": "b014c5e7dbb26667d69f098914c8e426ca091074a3475af5d5131389dc8f66bf",
+      "derived": false,
+      "note": "sim/ contains design RTL referenced by IP metadata, not testbenches",
+      "path": "src/pl/frame_retire_125/lab07_ip_repo/lab07_feature_mmio/sim/lab07_raw_control.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_ip_repo/lab07_feature_mmio/src/lab07_d_feature_slave.sv",
+      "source_sha256": "00bfbb16481fcecce1ff9dee8384894a972dbc4031ebbe8c5cfb427907106fce",
+      "sha256": "00bfbb16481fcecce1ff9dee8384894a972dbc4031ebbe8c5cfb427907106fce",
+      "derived": false,
+      "note": "sim/ contains design RTL referenced by IP metadata, not testbenches",
+      "path": "src/pl/frame_retire_125/lab07_ip_repo/lab07_feature_mmio/src/lab07_d_feature_slave.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_ip_repo/lab07_feature_mmio/src/lab07_dc0_feature.sv",
+      "source_sha256": "416f3cedd72e931e6d605bd5b51880ade69fbc60b44b2387ab67d5fb4d3389eb",
+      "sha256": "416f3cedd72e931e6d605bd5b51880ade69fbc60b44b2387ab67d5fb4d3389eb",
+      "derived": false,
+      "note": "sim/ contains design RTL referenced by IP metadata, not testbenches",
+      "path": "src/pl/frame_retire_125/lab07_ip_repo/lab07_feature_mmio/src/lab07_dc0_feature.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_ip_repo/lab07_feature_mmio/src/lab07_raw_control.sv",
+      "source_sha256": "b014c5e7dbb26667d69f098914c8e426ca091074a3475af5d5131389dc8f66bf",
+      "sha256": "b014c5e7dbb26667d69f098914c8e426ca091074a3475af5d5131389dc8f66bf",
+      "derived": false,
+      "note": "sim/ contains design RTL referenced by IP metadata, not testbenches",
+      "path": "src/pl/frame_retire_125/lab07_ip_repo/lab07_feature_mmio/src/lab07_raw_control.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_ip_repo/lab07_feature_mmio/xgui/lab07_dc0_feature_v1_0.tcl",
+      "source_sha256": "e0725b60cdc4cd625ee059e557ee3f5569fcd085edf601849e69e4d438080d96",
+      "sha256": "e0725b60cdc4cd625ee059e557ee3f5569fcd085edf601849e69e4d438080d96",
+      "derived": false,
+      "note": "sim/ contains design RTL referenced by IP metadata, not testbenches",
+      "path": "src/pl/frame_retire_125/lab07_ip_repo/lab07_feature_mmio/xgui/lab07_dc0_feature_v1_0.tcl"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_ip_repo/lab07_feature_mmio/xgui/lab07_feature_mmio_v1_0.tcl",
+      "source_sha256": "e0725b60cdc4cd625ee059e557ee3f5569fcd085edf601849e69e4d438080d96",
+      "sha256": "e0725b60cdc4cd625ee059e557ee3f5569fcd085edf601849e69e4d438080d96",
+      "derived": false,
+      "note": "sim/ contains design RTL referenced by IP metadata, not testbenches",
+      "path": "src/pl/frame_retire_125/lab07_ip_repo/lab07_feature_mmio/xgui/lab07_feature_mmio_v1_0.tcl"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_ip_repo/lab07_raw_window/component.xml",
+      "source_sha256": "27794329bdb50a5f4b87ead6c97c2232118423d8c5c8487d2a184f7af455dcc8",
+      "sha256": "27794329bdb50a5f4b87ead6c97c2232118423d8c5c8487d2a184f7af455dcc8",
+      "derived": false,
+      "note": "sim/ contains design RTL referenced by IP metadata, not testbenches",
+      "path": "src/pl/frame_retire_125/lab07_ip_repo/lab07_raw_window/component.xml"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_ip_repo/lab07_raw_window/sim/lab07_dc0_raw.sv",
+      "source_sha256": "00e0d6a9b80fcfc8a5ae38c70385eec4433fea7746a6fbe37f3b3a87629d8925",
+      "sha256": "00e0d6a9b80fcfc8a5ae38c70385eec4433fea7746a6fbe37f3b3a87629d8925",
+      "derived": false,
+      "note": "sim/ contains design RTL referenced by IP metadata, not testbenches",
+      "path": "src/pl/frame_retire_125/lab07_ip_repo/lab07_raw_window/sim/lab07_dc0_raw.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_ip_repo/lab07_raw_window/sim/lab07_raw_memory_bridge.sv",
+      "source_sha256": "232f0694a86dd9528b05975af208f69624487cbec12a8dbaea1a610235a2a6d3",
+      "sha256": "232f0694a86dd9528b05975af208f69624487cbec12a8dbaea1a610235a2a6d3",
+      "derived": false,
+      "note": "sim/ contains design RTL referenced by IP metadata, not testbenches",
+      "path": "src/pl/frame_retire_125/lab07_ip_repo/lab07_raw_window/sim/lab07_raw_memory_bridge.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_ip_repo/lab07_raw_window/src/lab07_dc0_raw.sv",
+      "source_sha256": "00e0d6a9b80fcfc8a5ae38c70385eec4433fea7746a6fbe37f3b3a87629d8925",
+      "sha256": "00e0d6a9b80fcfc8a5ae38c70385eec4433fea7746a6fbe37f3b3a87629d8925",
+      "derived": false,
+      "note": "sim/ contains design RTL referenced by IP metadata, not testbenches",
+      "path": "src/pl/frame_retire_125/lab07_ip_repo/lab07_raw_window/src/lab07_dc0_raw.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_ip_repo/lab07_raw_window/src/lab07_raw_memory_bridge.sv",
+      "source_sha256": "232f0694a86dd9528b05975af208f69624487cbec12a8dbaea1a610235a2a6d3",
+      "sha256": "232f0694a86dd9528b05975af208f69624487cbec12a8dbaea1a610235a2a6d3",
+      "derived": false,
+      "note": "sim/ contains design RTL referenced by IP metadata, not testbenches",
+      "path": "src/pl/frame_retire_125/lab07_ip_repo/lab07_raw_window/src/lab07_raw_memory_bridge.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_ip_repo/lab07_raw_window/xgui/lab07_dc0_raw_v1_0.tcl",
+      "source_sha256": "8e331b86519b411b0a052b4b9a7d6d16cfb4101585b565ca3d354a3896836acd",
+      "sha256": "8e331b86519b411b0a052b4b9a7d6d16cfb4101585b565ca3d354a3896836acd",
+      "derived": false,
+      "note": "sim/ contains design RTL referenced by IP metadata, not testbenches",
+      "path": "src/pl/frame_retire_125/lab07_ip_repo/lab07_raw_window/xgui/lab07_dc0_raw_v1_0.tcl"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_ip_repo/lab07_raw_window/xgui/lab07_raw_window_v1_0.tcl",
+      "source_sha256": "8e331b86519b411b0a052b4b9a7d6d16cfb4101585b565ca3d354a3896836acd",
+      "sha256": "8e331b86519b411b0a052b4b9a7d6d16cfb4101585b565ca3d354a3896836acd",
+      "derived": false,
+      "note": "sim/ contains design RTL referenced by IP metadata, not testbenches",
+      "path": "src/pl/frame_retire_125/lab07_ip_repo/lab07_raw_window/xgui/lab07_raw_window_v1_0.tcl"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/ip/warm_reset/component.xml",
+      "source_sha256": "77d52ef132676e9c9fbab24b76fb4c0137bd2528e464bbe226a7b27edd13db77",
+      "sha256": "77d52ef132676e9c9fbab24b76fb4c0137bd2528e464bbe226a7b27edd13db77",
+      "derived": false,
+      "note": "sim/ is the same packaged design RTL; no testbench",
+      "path": "src/pl/frame_retire_125/candidate/ip/warm_reset/component.xml"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/ip/warm_reset/sim/lab08_warm_reset_ctrl.sv",
+      "source_sha256": "be7b2e2ed0fc0d84b89973d1cc29bf72de55bb0b4ed8b16a61d25a357a45133d",
+      "sha256": "be7b2e2ed0fc0d84b89973d1cc29bf72de55bb0b4ed8b16a61d25a357a45133d",
+      "derived": false,
+      "note": "sim/ is the same packaged design RTL; no testbench",
+      "path": "src/pl/frame_retire_125/candidate/ip/warm_reset/sim/lab08_warm_reset_ctrl.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/ip/warm_reset/src/lab08_warm_reset_ctrl.sv",
+      "source_sha256": "be7b2e2ed0fc0d84b89973d1cc29bf72de55bb0b4ed8b16a61d25a357a45133d",
+      "sha256": "be7b2e2ed0fc0d84b89973d1cc29bf72de55bb0b4ed8b16a61d25a357a45133d",
+      "derived": false,
+      "note": "sim/ is the same packaged design RTL; no testbench",
+      "path": "src/pl/frame_retire_125/candidate/ip/warm_reset/src/lab08_warm_reset_ctrl.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/ip/warm_reset/xgui/lab08_warm_reset_ctrl_v1_0.tcl",
+      "source_sha256": "c577948627273e975366cca61cd414c1cb8ba2d74d2b448daaa471cf8ad4d820",
+      "sha256": "c577948627273e975366cca61cd414c1cb8ba2d74d2b448daaa471cf8ad4d820",
+      "derived": false,
+      "note": "sim/ is the same packaged design RTL; no testbench",
+      "path": "src/pl/frame_retire_125/candidate/ip/warm_reset/xgui/lab08_warm_reset_ctrl_v1_0.tcl"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/rtl/base_axi_vdma_0.sv",
+      "source_sha256": "bfe2088fb83aef73e6fbeec18087af6fa93d2d6ef9a41353fa7cf6d43d1164a5",
+      "sha256": "bfe2088fb83aef73e6fbeec18087af6fa93d2d6ef9a41353fa7cf6d43d1164a5",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/candidate/rtl/base_axi_vdma_0.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/rtl/frame_retire_fence.sv",
+      "source_sha256": "63adfa5594561a2de8bb11813743418881a02a3b4ba17d41bb6f127389d6920f",
+      "sha256": "63adfa5594561a2de8bb11813743418881a02a3b4ba17d41bb6f127389d6920f",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/candidate/rtl/frame_retire_fence.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/rtl/frame_retire_registers.sv",
+      "source_sha256": "cdb3db745db2be4777a047253b87ef3883bd86f575c2bb21ae96ba515403be67",
+      "sha256": "cdb3db745db2be4777a047253b87ef3883bd86f575c2bb21ae96ba515403be67",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/candidate/rtl/frame_retire_registers.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/rtl/hdmi_hpd_sync.v",
+      "source_sha256": "b8acdd0cfcf06cd295171c7b209504d8166c42187e934f61ae02f1e370b5f9b4",
+      "sha256": "b8acdd0cfcf06cd295171c7b209504d8166c42187e934f61ae02f1e370b5f9b4",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/candidate/rtl/hdmi_hpd_sync.v"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/rtl/unified_top.sv",
+      "source_sha256": "005dac7793a47ecdb35f13b09b90eaca29d3dbb488abca48065624d7401df935",
+      "sha256": "7d50064a10c639f1fce28704e7503f46800be813b481972a5addf5b97efd1094",
+      "derived": true,
+      "note": "Only replace developer absolute Hann ROM path with relocatable reference; prepare resolves same SHA256 ROM in new workspace. RTL logic and algorithms unchanged.",
+      "path": "src/pl/frame_retire_125/candidate/rtl/unified_top.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/rtl/vdma_axil_snapshot_bridge.sv",
+      "source_sha256": "4ffc62ccab2073c99bcefa1a1dbfe06e0e595bdfff410d27fb09edf5ebfd8a50",
+      "sha256": "4ffc62ccab2073c99bcefa1a1dbfe06e0e595bdfff410d27fb09edf5ebfd8a50",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/candidate/rtl/vdma_axil_snapshot_bridge.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/rtl/vdma_mm2s_r_slice.sv",
+      "source_sha256": "02f51523c901090e09cef37a8ec4a34273adcf4b662450f7a546b9baba6a732e",
+      "sha256": "02f51523c901090e09cef37a8ec4a34273adcf4b662450f7a546b9baba6a732e",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/candidate/rtl/vdma_mm2s_r_slice.sv"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/xdc/bridge_cdc.xdc",
+      "source_sha256": "cefbfbed08835a001cbf84c1906f4d99de93edc52077a6396ef76752092caad8",
+      "sha256": "cefbfbed08835a001cbf84c1906f4d99de93edc52077a6396ef76752092caad8",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/candidate/xdc/bridge_cdc.xdc"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/xdc/hdmi_external_serial_clock.xdc",
+      "source_sha256": "d054f21b6e0cc45fe98bf2e62fe751fdc52995c202e15f39394df8fb6fff5409",
+      "sha256": "d054f21b6e0cc45fe98bf2e62fe751fdc52995c202e15f39394df8fb6fff5409",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/candidate/xdc/hdmi_external_serial_clock.xdc"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/xdc/hdmi_out.xdc",
+      "source_sha256": "37d5c0a4b0d0686cac2fc77030496bf867395aff6b3095a1b1bbc0b703704ee7",
+      "sha256": "37d5c0a4b0d0686cac2fc77030496bf867395aff6b3095a1b1bbc0b703704ee7",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/candidate/xdc/hdmi_out.xdc"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/xdc/hdmi_startup_clock_audit.xdc",
+      "source_sha256": "8f6fbe44b00c484b817a1fc795c80896be7ac1d5183afcd4641a6cb6134091e9",
+      "sha256": "8f6fbe44b00c484b817a1fc795c80896be7ac1d5183afcd4641a6cb6134091e9",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/candidate/xdc/hdmi_startup_clock_audit.xdc"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/xdc/lab07.xdc",
+      "source_sha256": "0bdcf547765f6a69ff5f93d76e4c094cfccdf9d0bcfccee6a5ffcdd2627caab9",
+      "sha256": "0bdcf547765f6a69ff5f93d76e4c094cfccdf9d0bcfccee6a5ffcdd2627caab9",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/candidate/xdc/lab07.xdc"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/tcl/unified2_out_helpers.tcl",
+      "source_sha256": "ca55202bfcc28bca45710559be42caf8ee7d4f52ef9a1699a96ea83505394c2d",
+      "sha256": "ca55202bfcc28bca45710559be42caf8ee7d4f52ef9a1699a96ea83505394c2d",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/candidate/tcl/unified2_out_helpers.tcl"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/tcl/official_ps_preset.tcl",
+      "source_sha256": "2abd55985aa67df3aa7c5a7a3cd6106e46752c826660f8ccd96a4d47c0df7712",
+      "sha256": "2abd55985aa67df3aa7c5a7a3cd6106e46752c826660f8ccd96a4d47c0df7712",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/candidate/tcl/official_ps_preset.tcl"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/tcl/unified2_constraints.tcl",
+      "source_sha256": "7f560bb0b860cb8da67764b2e3aca3976aefa07136961fd68a31bb088819453d",
+      "sha256": "7f560bb0b860cb8da67764b2e3aca3976aefa07136961fd68a31bb088819453d",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/candidate/tcl/unified2_constraints.tcl"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_scripts/main_sources_unified2.tcl",
+      "source_sha256": "e0cef968a2e460a556bacfebe8e6d4747395d0b35a5d3f0975900977e7774c0b",
+      "sha256": "e0cef968a2e460a556bacfebe8e6d4747395d0b35a5d3f0975900977e7774c0b",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_scripts/main_sources_unified2.tcl"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "lab07_scripts/export_features.tcl",
+      "source_sha256": "23624b3972ab836b5b209646d5e49811eff69e82e4b1c6407839e11408520e42",
+      "sha256": "23624b3972ab836b5b209646d5e49811eff69e82e4b1c6407839e11408520e42",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/lab07_scripts/export_features.tcl"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "fft_ip/lab06_fft.xci",
+      "source_sha256": "e968c8cb73c6de15863458866feeaf9d144685daaee3813062dfcd46ddf623ac",
+      "sha256": "e968c8cb73c6de15863458866feeaf9d144685daaee3813062dfcd46ddf623ac",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/fft_ip/lab06_fft.xci"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "fft_ip/hann_q17.hex",
+      "source_sha256": "b0b24e611fee2b737c4e3e7436bac04501eddb63488297748c8e7e434458231e",
+      "sha256": "b0b24e611fee2b737c4e3e7436bac04501eddb63488297748c8e7e434458231e",
+      "derived": false,
+      "note": "",
+      "path": "src/pl/frame_retire_125/fft_ip/hann_q17.hex"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "tools/make_candidate_hwh.py",
+      "source_sha256": "224087b26965415cb8fc3666a38d7aa999f6aff1e9ceae1a8538ed3e3b71fda7",
+      "sha256": "224087b26965415cb8fc3666a38d7aa999f6aff1e9ceae1a8538ed3e3b71fda7",
+      "derived": false,
+      "note": "Original metadata code; called only by the release-derived wrapper",
+      "path": "src/pl/frame_retire_125/tools/make_candidate_hwh.py"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "tools/verify_hwh_integration.py",
+      "source_sha256": "0383db632420c33abaee0a8ad32d4929cc1562973d734ffea42030245f54ffc0",
+      "sha256": "0383db632420c33abaee0a8ad32d4929cc1562973d734ffea42030245f54ffc0",
+      "derived": false,
+      "note": "Original metadata code; called only by the release-derived wrapper",
+      "path": "src/pl/frame_retire_125/tools/verify_hwh_integration.py"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "candidate/tcl/build_unified2.tcl",
+      "source_sha256": "def70febc74eb14080ca477f941951789ab9682396db8d852919681373efa189",
+      "sha256": "2ea38b727eafe09c25a48702c8e87fc6299dce89a039fd2a5963a7a04d6ae102",
+      "derived": true,
+      "note": "Only use explicit Python environment and local BD-verification helper; no clock/BD/RTL change",
+      "path": "src/pl/frame_retire_125/candidate/tcl/build_unified2.tcl"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "stage3_5/verify_bd.tcl",
+      "source_sha256": "1bcfd305a11e196d8696a6919aaaaaa3301700d1b2870e92c7490416958c3d12",
+      "sha256": "c669d1f81c53437a86ca999df7cb7d4279370ebe1d406c9739d749be78ab55f1",
+      "derived": true,
+      "note": "Rebase generated diagnostics to fresh workspace, no change to PS7 checks",
+      "path": "src/pl/frame_retire_125/scripts/verify_bd.tcl"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+      "source_path": "patch_generated_reset.py",
+      "source_sha256": "e56250e7cd801376860465e6c58dff7c079537e31128075357984c02fbcd86ec",
+      "sha256": "5cb64f5f45746b6d32f8a6f1b3c05892b6325c62dd41fc77769be48cffa257b3",
+      "derived": true,
+      "note": "Retain exact named-port patch; guard requires new standalone source identity marker",
+      "path": "src/pl/frame_retire_125/patch_generated_reset.py"
+    },
+    {
+      "source_project": "FINAL_FRAME_RETIRE_FCLK1_125_RELEASE_1",
+      "source_path": "work/release.py",
+      "source_sha256": "1ec8fc4aa0314962133fcc39bcc125634bbfe8ff169afed760fb341dd85d4101",
+      "sha256": "c217afb9b4645b96b11f1f6dfb5d2b25a9d1d8d1593d980f3d34407f3b730ee9",
+      "derived": true,
+      "note": "Extract save/make_hwh/hwh_binding_proof unchanged; globals point to new workspace and real new routed DCP hash",
+      "path": "src/pl/frame_retire_125/scripts/make_hwh.py"
+    }
+  ],
+  "integration_files": [
+    {
+      "path": "src/pl/frame_retire_125/scripts/implement.tcl",
+      "source": "local_source_package/source/scripts/implement.tcl",
+      "source_sha256": "ad3a523c0d4ee4b10c78912d0406e375b2ce4822fbd7c820f29058c20603b84a",
+      "sha256": "ad3a523c0d4ee4b10c78912d0406e375b2ce4822fbd7c820f29058c20603b84a",
+      "derived": false,
+      "note": "Repository placement/metadata only; design logic unchanged"
+    },
+    {
+      "path": "src/pl/frame_retire_125/source_identity.json",
+      "source": "local_source_package/source/source_identity.json",
+      "source_sha256": "e2b10c4dd73db11a7f77c4d3f17e0b19063beddb6dd86476550e76320e8dd34e",
+      "sha256": "0041f6ff6fe0b7459440a5055f1f7c238b77e36f7a82d062458fef2f1adfae41",
+      "derived": true,
+      "note": "Repository placement/metadata only; design logic unchanged"
+    },
+    {
+      "path": "build/dependencies/frame_retire_125/pynq_dependencies.json",
+      "source": "local_source_package/dependencies/pynq_dependencies.json",
+      "source_sha256": "cf10eee99732e169dc25de1c28ca9cea6c4da2d18bfb37a4f1082b1aef0a401a",
+      "sha256": "cf10eee99732e169dc25de1c28ca9cea6c4da2d18bfb37a4f1082b1aef0a401a",
+      "derived": false,
+      "note": "Repository placement/metadata only; design logic unchanged"
+    },
+    {
+      "path": "build/dependencies/frame_retire_125/vdma_patch.json",
+      "source": "local_source_package/dependencies/vdma_patch.json",
+      "source_sha256": "ea2d2e88515e0ac83429e1ebb0eae04f901ed1c6c7c1746112d171971b033745",
+      "sha256": "ea2d2e88515e0ac83429e1ebb0eae04f901ed1c6c7c1746112d171971b033745",
+      "derived": false,
+      "note": "Repository placement/metadata only; design logic unchanged"
+    },
+    {
+      "path": "build/scripts/prepare_pl.py",
+      "source": "local_source_package/tools/prepare.py",
+      "source_sha256": "7c8d451639f5d91624ab21de5d8896da3814d3218942312d264f9568a4259612",
+      "sha256": "65e1c8fbcdd5848263d4ba3dde23537120ea5d2200e4b6027f92ce942a2c45c4",
+      "derived": true,
+      "note": "Repository placement/metadata only; design logic unchanged"
+    },
+    {
+      "path": "build/scripts/build_pl.py",
+      "source": "local_source_package/tools/build.py",
+      "source_sha256": "899694b10a97721b179352c2d9251da6f0e9be06464c7b6aa9ffe18741cac4f8",
+      "sha256": "899694b10a97721b179352c2d9251da6f0e9be06464c7b6aa9ffe18741cac4f8",
+      "derived": false,
+      "note": "Repository placement/metadata only; design logic unchanged"
+    },
+    {
+      "path": "build/scripts/check_pl.py",
+      "source": "read-only source/contract checker",
+      "sha256": "ba4a240486fd80e5d3fb60468e1a19ae69a8ecc66d3dcbd080b218b4e4b5c54f",
+      "derived": false
+    },
+    {
+      "path": "docs/reproducibility/pl_source_binding.md",
+      "source": "current source-binding documentation",
+      "sha256": "57ff03adf2d90641d77fb67382faf243ce4021e170a9a89089bce15a0a937270",
+      "derived": false
+    }
+  ],
+  "source_candidate": "FINAL_FRAME_RETIRE_FCLK1_125_EVAL_1",
+  "release": "FINAL_FRAME_RETIRE_FCLK1_125_RELEASE_1",
+  "execution": "OFFLINE_IDENTITY_AND_PREPARATION_ONLY_NO_HLS_IMPLEMENTATION_OR_BOARD",
+  "excluded": [
+    "tests",
+    "testbenches",
+    "raw_data",
+    "logs",
+    "historical_reports",
+    "xpr",
+    "dcp",
+    "bit",
+    "hwh",
+    "generated_ip_rtl",
+    "vendor_proprietary_source"
+  ],
+  "external_dependencies": [
+    "PYNQ fixed commit white list",
+    "lawfully installed Vivado VDMA plus team patch",
+    "Vivado/HLS regenerated FFT and video IP"
+  ]
+}

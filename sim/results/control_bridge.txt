@@ -1,0 +1,1 @@
+PASS INDEPENDENT_BRIDGE_REVIEW reads=513 writes=513 reset_inflight=1 clocks_100_142MHz

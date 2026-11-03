@@ -1,0 +1,170 @@
+{
+  "date": "2026-11-02",
+  "scope": "isolated software fixtures, no hardware",
+  "results": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_checker.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "recorded_output": null,
+      "recorded_console_summary": {
+        "tests": 6,
+        "elapsed_seconds": 0.415,
+        "unittest_ok": true,
+        "test_names": [
+          [
+            "test_malformed",
+            "ok"
+          ],
+          [
+            "test_missing",
+            "ok"
+          ],
+          [
+            "test_path_escape",
+            "ok"
+          ],
+          [
+            "test_structure_not_approval",
+            "ok"
+          ],
+          [
+            "test_tamper_preserves_original",
+            "ok"
+          ],
+          [
+            "test_unmatched",
+            "ok"
+          ]
+        ]
+      }
+    },
+    {
+      "command": [
+        "python",
+        "scripts/check_capture.py",
+        "--run",
+        "examples/good",
+        "--report",
+        "good.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "recorded_output": {
+        "module": "capture-integrity-0.1",
+        "run": "<local_path>/GOOD",
+        "structural_status": "STRUCTURALLY_COMPLETE",
+        "issues": [],
+        "inventory": [
+          {
+            "path": "raw/fixture.txt",
+            "size_bytes": 21,
+            "sha256": "f4f0c1ca7ce2ad103e62fdea5bc017eceb0d0c719328cd468cfcc1da9902da28"
+          },
+          {
+            "path": "feature/fixture.txt",
+            "size_bytes": 25,
+            "sha256": "5433487e4c9538c10924d337c20814497196d418dbe69a97354d2e3e972ad6db"
+          },
+          {
+            "path": "reference/fixture.txt",
+            "size_bytes": 27,
+            "sha256": "a6d6b3b6070c368a356da3e194ed8ca4193807227d414f54b565377517af0918"
+          }
+        ],
+        "review_status": "SOFTWARE_FIXTURE",
+        "measurement_validity": "NOT_ASSESSED",
+        "formal_training_eligible": false,
+        "source_manifest_reverified": false,
+        "note": "Only source snapshot consistency checked. No parsing of Raw/Feature, frame proof, voltage calibration or label approval."
+      },
+      "recorded_console_summary": {
+        "tests": null,
+        "elapsed_seconds": null,
+        "unittest_ok": false,
+        "test_names": []
+      }
+    },
+    {
+      "command": [
+        "python",
+        "scripts/check_capture.py",
+        "--run",
+        "examples/mismatch",
+        "--report",
+        "bad.json"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "recorded_output": {
+        "module": "capture-integrity-0.1",
+        "run": "<local_path>/MISMATCH",
+        "structural_status": "INCOMPLETE",
+        "issues": [
+          {
+            "code": "SOURCE_MISMATCH",
+            "field": "waveform_id",
+            "message": "Registration differs from source snapshot."
+          }
+        ],
+        "inventory": [
+          {
+            "path": "raw/fixture.txt",
+            "size_bytes": 21,
+            "sha256": "f4f0c1ca7ce2ad103e62fdea5bc017eceb0d0c719328cd468cfcc1da9902da28"
+          },
+          {
+            "path": "feature/fixture.txt",
+            "size_bytes": 25,
+            "sha256": "5433487e4c9538c10924d337c20814497196d418dbe69a97354d2e3e972ad6db"
+          },
+          {
+            "path": "reference/fixture.txt",
+            "size_bytes": 27,
+            "sha256": "a6d6b3b6070c368a356da3e194ed8ca4193807227d414f54b565377517af0918"
+          }
+        ],
+        "review_status": "SOFTWARE_FIXTURE",
+        "measurement_validity": "NOT_ASSESSED",
+        "formal_training_eligible": false,
+        "source_manifest_reverified": false,
+        "note": "Only source snapshot consistency checked. No parsing of Raw/Feature, frame proof, voltage calibration or label approval."
+      },
+      "recorded_console_summary": {
+        "tests": null,
+        "elapsed_seconds": null,
+        "unittest_ok": false,
+        "test_names": []
+      }
+    },
+    {
+      "command": [
+        "python",
+        "<local_path>/quick_validate.py",
+        "<local_path>/capture-audit"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "recorded_output_text": "Skill is valid!\n",
+      "recorded_console_summary": {
+        "tests": null,
+        "elapsed_seconds": null,
+        "unittest_ok": false,
+        "test_names": []
+      }
+    }
+  ],
+  "record_kind": "historical_result_summary",
+  "source_sha256": "9b700e215dd365fa3fc7ea93e66c430734a36b0a9669f9761f9676f9d9780f36",
+  "normalization": "Workstation paths and raw console traces omitted; numeric results and original dates retained"
+}

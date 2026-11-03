@@ -1,0 +1,14 @@
+{
+  "algorithm": "logistic_regression",
+  "comparison": "random_forest",
+  "source_model_version": "limited-scope-physical-v1-20261102",
+  "deployment_version": "physical-portable-1.1",
+  "model_sha256": "06e30149cf4c469e0a3da5743c98ff87697ada7d0a6493eaa6081f88c62cb16c",
+  "comparison_sha256": "e2d9eb13955713bccaf394d4d1d22b9ff32e231213f97c85359c5b7508e8f439",
+  "status": "CURRENT_ENGINEERING_CANDIDATE",
+  "weights_changed": false,
+  "classification_quality_tradeoff": "RF better H5; LR higher EV26 overall and lower prior board call overhead",
+  "raw_release_scope_preserved": "TRAINING_ONLY",
+  "production_release": false,
+  "unified_2_run_py_integration": "NOT_VERIFIED"
+}

@@ -1,0 +1,119 @@
+{
+  "split_role": "calibration_dev",
+  "sample_rate_hz": 10000,
+  "duration_s": 1,
+  "fundamental_hz": 50,
+  "cases": [
+    {
+      "id": "S0_SINE"
+    },
+    {
+      "id": "S1_H3_01PCT",
+      "harmonics": {
+        "3": {
+          "ratio": 0.01,
+          "phase_rad": 0
+        }
+      }
+    },
+    {
+      "id": "S1_H3_05PCT",
+      "harmonics": {
+        "3": {
+          "ratio": 0.05,
+          "phase_rad": 0
+        }
+      }
+    },
+    {
+      "id": "S1_H3_10PCT",
+      "harmonics": {
+        "3": {
+          "ratio": 0.1,
+          "phase_rad": 0
+        }
+      }
+    },
+    {
+      "id": "S1_H5_01PCT",
+      "harmonics": {
+        "5": {
+          "ratio": 0.01,
+          "phase_rad": 0
+        }
+      }
+    },
+    {
+      "id": "S1_H5_05PCT",
+      "harmonics": {
+        "5": {
+          "ratio": 0.05,
+          "phase_rad": 0
+        }
+      }
+    },
+    {
+      "id": "S1_H5_10PCT",
+      "harmonics": {
+        "5": {
+          "ratio": 0.1,
+          "phase_rad": 0
+        }
+      }
+    },
+    {
+      "id": "S1_H7_01PCT",
+      "harmonics": {
+        "7": {
+          "ratio": 0.01,
+          "phase_rad": 0
+        }
+      }
+    },
+    {
+      "id": "S1_H7_05PCT",
+      "harmonics": {
+        "7": {
+          "ratio": 0.05,
+          "phase_rad": 0
+        }
+      }
+    },
+    {
+      "id": "S1_H7_10PCT",
+      "harmonics": {
+        "7": {
+          "ratio": 0.1,
+          "phase_rad": 0
+        }
+      }
+    },
+    {
+      "id": "S1_H9_01PCT",
+      "harmonics": {
+        "9": {
+          "ratio": 0.01,
+          "phase_rad": 0
+        }
+      }
+    },
+    {
+      "id": "S1_H9_05PCT",
+      "harmonics": {
+        "9": {
+          "ratio": 0.05,
+          "phase_rad": 0
+        }
+      }
+    },
+    {
+      "id": "S1_H9_10PCT",
+      "harmonics": {
+        "9": {
+          "ratio": 0.1,
+          "phase_rad": 0
+        }
+      }
+    }
+  ]
+}

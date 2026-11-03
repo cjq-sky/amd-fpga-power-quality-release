@@ -1,0 +1,33 @@
+{
+  "feature_order": [
+    "feature_a",
+    "feature_b"
+  ],
+  "labels": [
+    "CLASS_A",
+    "CLASS_B"
+  ],
+  "model_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "rows": [
+    {
+      "id": "frame_001",
+      "input": [
+        0.25,
+        1.5
+      ],
+      "status": "ACCEPTED",
+      "label": "CLASS_B",
+      "probabilities": [
+        0.75,
+        0.25
+      ]
+    },
+    {
+      "id": "frame_002",
+      "input": null,
+      "status": "REJECTED",
+      "label": null,
+      "probabilities": null
+    }
+  ]
+}

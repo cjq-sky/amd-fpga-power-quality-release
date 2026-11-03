@@ -1,0 +1,7 @@
+{
+  "waveform_id": "EXAMPLE",
+  "parameter_set_id": "PARAM",
+  "lineage_group_id": "EXAMPLE_PARENT",
+  "source_type": "synthetic_fixture",
+  "waveform_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+}

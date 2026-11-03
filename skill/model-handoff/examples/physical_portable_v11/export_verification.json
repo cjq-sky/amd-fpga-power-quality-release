@@ -1,0 +1,23 @@
+{
+  "logistic_regression": {
+    "rows": 2496,
+    "class_mismatches": 0,
+    "max_probability_abs_difference": 5.551115123125783e-16,
+    "invalid_inputs_rejected": 8,
+    "version_and_adapter_boundary_rejection": "PASS",
+    "status": "PASS",
+    "environment": "B export environment, not board ARMv7"
+  },
+  "random_forest": {
+    "rows": 2496,
+    "class_mismatches": 0,
+    "max_probability_abs_difference": 8.673617379884035e-19,
+    "invalid_inputs_rejected": 8,
+    "version_and_adapter_boundary_rejection": "PASS",
+    "status": "PASS",
+    "environment": "B export environment, not board ARMv7"
+  },
+  "record_kind": "historical_result_summary",
+  "source_sha256": "376dad05eb57f4d5e3fc5b0bfdc908d06699d34170854fbb46597aa131b635f7",
+  "normalization": "Workstation paths and raw console traces omitted; numeric results and original dates retained"
+}

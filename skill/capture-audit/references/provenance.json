@@ -1,0 +1,30 @@
+{
+  "record_kind": "historical_source_identity_summary",
+  "source_sha256": "3ce7839d8ce30fbb649bb69a1c6c4f3883624ae77b750b50d700481f1bcfa10f",
+  "source_records": [
+    {
+      "record_id": "source_1",
+      "sha256": "e8fb639a55fa605d571dfe15a68023d6324764d91b62ea0ab764985579b1f8e7"
+    },
+    {
+      "record_id": "source_2",
+      "sha256": "747a0471db849220c53bd4bda692cb598872ad003c126e96eb65c53a0959a536"
+    },
+    {
+      "record_id": "source_3",
+      "sha256": "486cb5747f942466f9c623ead27ff327d4cd020ddcabd82c084c44c8d9368fc0"
+    },
+    {
+      "record_id": "source_4",
+      "sha256": "e523ef1d1b73257262d7fff992aeb7a16c942cc3bf10cdacf046add2fd29f30c"
+    },
+    {
+      "record_id": "source_5",
+      "sha256": "fa43277d00d38cdfa620970806cd22e12966b39053a379b7bb850b39383df2b6"
+    },
+    {
+      "record_id": "source_6",
+      "sha256": "f649d622083905f7b3ad1f69896f46d456a1e53f6d9b078f5d9b39af6931cd0a"
+    }
+  ]
+}
